@@ -1,0 +1,111 @@
+/* Global Resets */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth; /* Gives that sleek, smooth sliding effect when clicking menu items */
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #ffffff;
+    border-bottom: 1px solid #eaeaea;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+.logo {
+    font-weight: bold;
+    font-size: 20px;
+    letter-spacing: 2px;
+    color: #0d233a; /* Deep, professional Navy */
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+.nav-links li {
+    margin-left: 20px;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #666666;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+.nav-links a:hover {
+    color: #bfa15f; /* Elegant Gold accent */
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('your-background-image.jpg') no-repeat center center/cover;
+    padding: 0 20px;
+}
+.hero-content h1 {
+    font-size: 48px;
+    color: #0d233a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.hero-content p {
+    font-size: 18px;
+    color: #666666;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+.cta-button {
+    display: inline-block;
+    padding: 12px 30px;
+    background-color: #0d233a;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+.cta-button:hover {
+    background-color: #bfa15f;
+}
+
+/* Services Grid */
+.services-section {
+    padding: 100px 8%;
+    background-color: #fafafa;
+    text-align: center;
+}
+.services-section h2 {
+    margin-bottom: 50px;
+    color: #0d233a;
+}
+.grid-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 8px;
+    width: 350px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+    border: 1px solid #eeeeee;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px); /* Elegant lifting effect on hover */
+}
