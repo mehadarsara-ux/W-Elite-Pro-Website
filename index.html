@@ -1,98 +1,109 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>W-Elite | Institutional Prospectus</title>
     <style>
-        :root {
-            --paper-white: #fcfcfc;
-            --ink-navy: #0a1128;
-            --gold-accent: #b8860b;
-        }
-
         body {
-            background-color: var(--paper-white);
-            color: var(--ink-navy);
-            font-family: 'Times New Roman', serif;
-            padding: 80px 15%;
-            line-height: 1.6;
+            background-color: #fcfcfc;
+            color: #0a1128;
+            font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+            line-height: 1.8;
+            max-width: 700px;
+            margin: 100px auto;
+            padding: 0 20px;
         }
 
-        /* The "Cover" - Minimalist Authority */
-        header { margin-bottom: 200px; }
-        .branding { 
-            font-family: monospace; 
-            letter-spacing: 0.3rem; 
-            font-size: 0.8rem;
+        /* Institutional Branding */
+        .brand {
+            font-family: sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2rem;
+            text-transform: uppercase;
+            margin-bottom: 80px;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .abstract {
+            font-size: 1.2rem;
+            font-style: italic;
+            margin-bottom: 120px;
+            border-left: 2px solid #0a1128;
+            padding-left: 20px;
+        }
+
+        /* Disciplines (Taxonomy) */
+        .discipline {
+            margin-bottom: 60px;
+        }
+
+        .discipline-head {
+            border-bottom: 1px solid #0a1128;
+            padding-bottom: 10px;
             margin-bottom: 20px;
         }
-        h1 { 
-            font-size: 4rem; 
-            font-weight: normal; 
-            margin-bottom: 30px; 
-        }
-        .intro { 
-            font-size: 1.5rem; 
-            max-width: 600px; 
-            font-style: italic; 
+
+        .discipline-title {
+            font-size: 1.5rem;
+            font-weight: 600;
         }
 
-        /* The "Taxonomy" - Sharp, Architectural Pathways */
-        section { margin-top: 100px; }
-        .discipline {
-            border-top: 1px solid var(--ink-navy);
-            padding: 40px 0;
-            display: flex;
-            gap: 50px;
+        .discipline-subtitle {
+            font-family: sans-serif;
+            font-size: 0.6rem;
+            text-transform: uppercase;
+            letter-spacing: 0.15rem;
         }
-        .discipline-meta { width: 300px; }
-        .discipline-title { 
-            font-size: 1.8rem; 
-            font-family: 'Playfair Display', serif; 
-        }
-        .discipline-desc { 
-            font-size: 1.1rem; 
-            max-width: 500px; 
+
+        .content {
+            font-size: 1.05rem;
         }
     </style>
 </head>
 <body>
 
-    <header>
-        <div class="branding">W-ELITE PRO</div>
-        <h1>Linguistic Mastery.</h1>
-        <p class="intro">An institute for those who require precision, academic command, and professional authority in the English language.</p>
-    </header>
+    <div class="brand">W-ELITE INSTITUTE</div>
 
-    <section>
-        <div class="discipline">
-            <div class="discipline-meta">
-                <div class="discipline-title">W-Core</div>
-                <small>GENERAL FLUENCY</small>
-            </div>
-            <div class="discipline-desc">
-                The systematic deconstruction of hesitation. This discipline focuses on building sophisticated narrative structures that allow for effortless transition between everyday discourse and high-level, critical communication.
-            </div>
-        </div>
+    <h1>The English Mandate</h1>
+    
+    <p class="abstract">
+        W-Elite Pro is built upon a single axiom: that language is not a skill to be "acquired," but a structure to be commanded. We provide the frameworks for those who operate on the global stage.
+    </p>
 
-        <div class="discipline">
-            <div class="discipline-meta">
-                <div class="discipline-title">W-Ultra</div>
-                <small>IELTS STRATEGIC PREP</small>
-            </div>
-            <div class="discipline-desc">
-                A rigorous diagnostic-led framework. We treat the exam not as a hurdle, but as a technical requirement to be mastered through strict, data-informed strategy and precise lexical expansion.
-            </div>
+    <div class="discipline">
+        <div class="discipline-head">
+            <div class="discipline-title">W-Core</div>
+            <div class="discipline-subtitle">General Fluency & Linguistic Autonomy</div>
         </div>
+        <p class="content">
+            A comprehensive deconstruction of hesitation. We move beyond conversational basics to establish a precise, natural, and authoritative command of the language, suitable for high-level personal and professional environments.
+        </p>
+    </div>
 
-        <div class="discipline">
-            <div class="discipline-meta">
-                <div class="discipline-title">W-PACE</div>
-                <small>EXECUTIVE EXCELLENCE</small>
-            </div>
-            <div class="discipline-desc">
-                For the academic and the professional. This framework addresses the specific demands of public defense, formal authorship, and the rhetorical authority required to lead in international spaces.
-            </div>
+    <div class="discipline">
+        <div class="discipline-head">
+            <div class="discipline-title">W-Ultra</div>
+            <div class="discipline-subtitle">IELTS Technical Mastery (Band 7+)</div>
         </div>
-    </section>
+        <p class="content">
+            A diagnostic-driven path for the elite candidate. This is a technical requirement mastered through rigorous test-strategy execution. We do not teach "English"; we train for the 7+ threshold.
+        </p>
+    </div>
+
+    <div class="discipline">
+        <div class="discipline-head">
+            <div class="discipline-title">W-PACE</div>
+            <div class="discipline-subtitle">Executive & Academic Excellence</div>
+        </div>
+        <p class="content">
+            A framework for rhetorical authority. Designed for educators, executives, and academics who require the technical capacity to defend positions, present findings, and publish within international, high-stakes environments.
+        </p>
+    </div>
 
 </body>
 </html>
