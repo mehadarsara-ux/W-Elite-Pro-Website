@@ -5,27 +5,34 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W-Elite | Advanced English Frameworks</title>
     <style>
-        /* Minimalist Global Reset & Typography */
+        /* ==========================================
+           1. GLOBAL STYLES & TYPOGRAPHY
+           ========================================== */
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-        }
-        
-        body {
-            background-color: #fcfcfc;
-            color: #111;
-            line-height: 1.6;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            scroll-behavior: smooth;
         }
 
-        /* Navigation Bar */
+        body {
+            background-color: #FFFFFF;
+            color: #333333;
+            line-height: 1.7;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* ==========================================
+           2. FIXED NAVIGATION BAR
+           ========================================== */
         header {
-            background-color: #ffffff;
+            background-color: rgba(255, 255, 255, 0.96);
             border-bottom: 1px solid #eaeaea;
             position: sticky;
             top: 0;
             z-index: 1000;
+            backdrop-filter: blur(8px);
         }
 
         .nav-container {
@@ -38,106 +45,120 @@
         }
 
         .logo {
-            font-size: 1.4rem;
+            font-size: 1.3rem;
             font-weight: 800;
-            letter-spacing: 1px;
-            color: #111;
+            letter-spacing: 1.5px;
+            color: #001f3f; /* Institutional Navy */
             text-decoration: none;
         }
 
         nav a {
-            color: #555;
+            color: #555555;
             text-decoration: none;
-            margin-left: 25px;
-            font-size: 0.95rem;
+            margin-left: 30px;
+            font-size: 0.9rem;
             font-weight: 500;
+            letter-spacing: 0.5px;
             transition: color 0.2s ease;
         }
 
         nav a:hover {
-            color: #111;
+            color: #D4AF37; /* Premium Gold Accent */
         }
 
-        /* Hero Section */
+        /* ==========================================
+           3. HERO SECTION (HIGH CONTRAST)
+           ========================================== */
         #hero {
-            padding: 90px 20px;
+            padding: 120px 20px;
             text-align: center;
             background-color: #fafafa;
             border-bottom: 1px solid #eaeaea;
         }
 
         #hero h1 {
-            font-size: 2.6rem;
-            color: #111;
-            max-width: 850px;
-            margin: 0 auto 20px auto;
-            line-height: 1.3;
+            font-size: 2.8rem;
+            color: #001f3f; /* Deep Navy Title */
+            max-width: 900px;
+            margin: 0 auto 24px auto;
+            line-height: 1.25;
             letter-spacing: -0.5px;
+            font-weight: 700;
         }
 
         #hero p {
             font-size: 1.2rem;
-            color: #555;
-            max-width: 750px;
-            margin: 0 auto 35px auto;
+            color: #444444;
+            max-width: 700px;
+            margin: 0 auto 40px auto;
             line-height: 1.7;
         }
 
-       <a href="https://w-elitepro.com/apply/" class="cta-button">Apply for Admission</a>
-            background-color: #111;
-            color: #fff;
-            padding: 14px 30px;
+        /* Premium Button Styling */
+        .cta-button {
+            background-color: #001f3f; /* Solid Navy */
+            color: #FFFFFF;
+            padding: 14px 32px;
             text-decoration: none;
             font-weight: 600;
+            font-size: 0.95rem;
+            letter-spacing: 0.5px;
             border-radius: 4px;
             display: inline-block;
-            transition: background-color 0.2s ease;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
+            border: 1px solid #001f3f;
         }
 
         .cta-button:hover {
-            background-color: #333;
+            background-color: #ffffff;
+            color: #001f3f;
+            border-color: #001f3f;
         }
 
-        /* Philosophy Section */
+        /* ==========================================
+           4. PHILOSOPHY SECTION (MINIMALIST PROSE)
+           ========================================== */
         #philosophy {
-            padding: 80px 20px;
-            max-width: 850px;
+            padding: 100px 20px;
+            max-width: 800px;
             margin: 0 auto;
-            text-align: left;
         }
 
         #philosophy h2 {
             font-size: 1.8rem;
-            color: #111;
-            margin-bottom: 20px;
-            position: relative;
+            color: #001f3f; /* Deep Navy */
+            margin-bottom: 24px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         #philosophy p {
-            font-size: 1.1rem;
-            color: #444;
-            line-height: 1.8;
+            font-size: 1.15rem;
+            color: #444444;
+            line-height: 1.85;
         }
 
-        /* Pathways Section */
+        /* ==========================================
+           5. PATHWAYS GRID SECTION
+           ========================================== */
         #pathways {
-            padding: 80px 20px;
+            padding: 100px 20px;
             max-width: 1100px;
             margin: 0 auto;
-            background-color: #fcfcfc;
         }
 
         #pathways h2 {
             font-size: 1.8rem;
-            color: #222;
-            margin-bottom: 40px;
+            color: #001f3f; /* Deep Navy */
+            margin-bottom: 48px;
             text-align: center;
+            font-weight: 700;
         }
 
         .grid-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 25px;
+            gap: 30px;
             justify-content: center;
         }
 
@@ -146,32 +167,38 @@
             min-width: 300px;
             max-width: 340px;
             border: 1px solid #eaeaea;
-            background-color: #ffffff;
-            padding: 30px;
+            background-color: #FFFFFF;
+            padding: 35px 30px;
             border-radius: 4px;
-            transition: transform 0.2s ease, box-shadow 0.2s ease;
+            border-top: 3px solid #001f3f; /* Navy Header Border for Cards */
+            transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
         }
 
+        /* Subtle elevation and gold shift on focus */
         .card:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03);
+            border-top-color: #D4AF37; /* Shifts from Navy to Gold on hover */
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
         }
 
         .card h3 {
-            font-size: 1.3rem;
-            color: #111;
-            margin-bottom: 15px;
+            font-size: 1.25rem;
+            color: #001f3f; /* Deep Navy */
+            margin-bottom: 16px;
+            font-weight: 600;
+            letter-spacing: -0.2px;
         }
 
         .card p {
-            color: #666;
+            color: #555555;
             font-size: 0.95rem;
-            line-height: 1.6;
+            line-height: 1.65;
         }
 
-        /* Registration Section */
+        /* ==========================================
+           6. REGISTRATION / ADMISSION SECTION
+           ========================================== */
         #registration {
-            padding: 90px 20px;
+            padding: 110px 20px;
             text-align: center;
             background-color: #fafafa;
             border-top: 1px solid #eaeaea;
@@ -180,35 +207,88 @@
 
         #registration h2 {
             font-size: 1.8rem;
-            color: #111;
-            margin-bottom: 15px;
+            color: #001f3f; /* Deep Navy */
+            margin-bottom: 16px;
+            font-weight: 700;
         }
 
         #registration p {
-            font-size: 1.1rem;
-            color: #555;
+            font-size: 1.15rem;
+            color: #444444;
             max-width: 600px;
-            margin: 0 auto 35px auto;
+            margin: 0 auto 40px auto;
             line-height: 1.7;
         }
 
-        /* Footer */
-        footer {
-            text-align: center;
-            padding: 40px 20px;
-            color: #888;
-            font-size: 0.85rem;
-            background-color: #ffffff;
+        /* Secondary Gold Accent Button Variant for the Footer CTA */
+        #registration .cta-button {
+            background-color: #D4AF37; /* Premium Gold */
+            border-color: #D4AF37;
+            color: #ffffff;
         }
 
-        /* Mobile Optimization */
+        #registration .cta-button:hover {
+            background-color: #001f3f; /* Inverts to Navy on Hover */
+            border-color: #001f3f;
+            color: #ffffff;
+        }
+
+        /* ==========================================
+           7. FOOTER STYLING
+           ========================================== */
+        footer {
+            text-align: center;
+            padding: 50px 20px;
+            color: #888888;
+            font-size: 0.85rem;
+            background-color: #FFFFFF;
+            letter-spacing: 0.3px;
+        }
+
+        /* ==========================================
+           8. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
+           ========================================== */
         @media (max-width: 768px) {
-            #hero h1 { font-size: 2rem; }
-            #hero p { font-size: 1.1rem; }
-            .nav-container { flex-direction: column; gap: 15px; text-align: center; }
-            nav a { margin: 0 10px; }
-            .grid-container { flex-direction: column; align-items: center; }
-            .card { max-width: 100%; }
+            header {
+                position: relative;
+            }
+            
+            .nav-container {
+                flex-direction: column;
+                gap: 16px;
+                padding: 15px 20px;
+            }
+            
+            nav a {
+                margin: 0 12px;
+                font-size: 0.85rem;
+            }
+
+            #hero {
+                padding: 70px 20px;
+            }
+
+            #hero h1 {
+                font-size: 2rem;
+            }
+
+            #hero p {
+                font-size: 1.1rem;
+            }
+
+            #philosophy, #pathways, #registration {
+                padding: 60px 20px;
+            }
+
+            .grid-container {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                max-width: 100%;
+                min-width: 100%;
+            }
         }
     </style>
 </head>
@@ -231,7 +311,7 @@
     <section id="hero">
         <h1>Advanced English Frameworks for Academics, Researchers, and Professionals</h1>
         <p>High-tier linguistic competence tailored for scholars, postgraduates, and corporate leaders aiming for global impact and publication-ready precision.</p>
-        <a href="#registration" class="cta-button">Apply for Admission</a>
+        <a href="https://w-elitepro.com/apply/" class="cta-button">Apply for Admission</a>
     </section>
 
     <!-- Philosophy Section -->
@@ -270,8 +350,7 @@
     <section id="registration">
         <h2>Begin Your Pathway</h2>
         <p>Admission to W-Elite cohorts is selective to ensure peer-to-peer excellence. Submit your professional details to schedule an initial placement evaluation.</p>
-        <!-- Replace '#' with your Tally form link later -->
-        <a href="#" class="cta-button">Access Application Form</a>
+        <a href="https://w-elitepro.com/apply/" class="cta-button">Access Application Form</a>
     </section>
 
     <!-- Footer -->
