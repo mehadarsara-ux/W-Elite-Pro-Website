@@ -24,7 +24,7 @@
         }
 
         /* ==========================================
-           2. FIXED NAVIGATION BAR
+           2. NAVIGATION BAR
            ========================================== */
         header {
             background-color: rgba(255, 255, 255, 0.96);
@@ -48,9 +48,8 @@
             font-size: 1.3rem;
             font-weight: 800;
             letter-spacing: 1.5px;
-            color: #001f3f !important; /* Forces Deep Institutional Navy */
+            color: #001f3f;
             text-decoration: none;
-            display: inline-block;
         }
 
         nav a {
@@ -64,22 +63,22 @@
         }
 
         nav a:hover {
-            color: #D4AF37; /* Premium Gold Accent */
+            color: #D4AF37;
         }
 
         /* ==========================================
-           3. HERO SECTION (HIGH CONTRAST & RESPONSIVE)
+           3. HERO SECTION
            ========================================== */
         #hero {
             padding: 120px 20px;
             text-align: center;
-            background-color: #001f3f; /* Deep Navy Background */
-            border-bottom: 1px solid #001122;
+            background-color: #fafafa;
+            border-bottom: 1px solid #eaeaea;
         }
 
         #hero h1 {
             font-size: 2.6rem;
-            color: #FFFFFF; /* Crisped to White for Contrast */
+            color: #001f3f;
             max-width: 900px;
             margin: 0 auto 24px auto;
             line-height: 1.3;
@@ -89,15 +88,14 @@
 
         #hero p {
             font-size: 1.2rem;
-            color: #E0E0E0; /* Soft contrast grey for readability */
+            color: #444444;
             max-width: 700px;
             margin: 0 auto 40px auto;
             line-height: 1.7;
         }
 
-        /* Premium Button Styling */
         .cta-button {
-            background-color: #D4AF37; /* Premium Gold Accent for Hero Visibility */
+            background-color: #001f3f;
             color: #FFFFFF;
             padding: 14px 32px;
             text-decoration: none;
@@ -107,127 +105,159 @@
             border-radius: 4px;
             display: inline-block;
             transition: background-color 0.2s ease, border-color 0.2s ease;
-            border: 1px solid #D4AF37;
+            border: 1px solid #001f3f;
         }
 
         .cta-button:hover {
-            background-color: #FFFFFF;
+            background-color: #ffffff;
             color: #001f3f;
-            border-color: #FFFFFF;
+            border-color: #001f3f;
         }
 
         /* ==========================================
-           4. PHILOSOPHY SECTION (MINIMALIST PROSE)
+           4. PHILOSOPHY & INTEGRATED RECOMMENDATION
            ========================================== */
-        #philosophy {
-            padding: 100px 20px;
-            max-width: 800px;
+        #about-framework {
+            padding: 100px 20px 60px 20px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
-        #philosophy h2 {
+        .philosophy-block h2 {
             font-size: 1.8rem;
             color: #001f3f; 
-            margin-bottom: 24px;
+            margin-bottom: 20px;
             font-weight: 700;
             letter-spacing: -0.3px;
         }
 
-        #philosophy p {
+        .philosophy-block p {
             font-size: 1.15rem;
             color: #444444;
             line-height: 1.85;
+            margin-bottom: 40px;
         }
 
-        /* ==========================================
-           5. TESTIMONIAL / RECOMMENDATION SECTION
-           ========================================== */
-        #endorsement {
+        /* Recommendation Styled Elegantly as an Academic Endorsement Callout */
+        .academic-endorsement {
             background-color: #fafafa;
-            padding: 90px 20px;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-            text-align: center;
+            border-left: 4px solid #001f3f;
+            padding: 30px 35px;
+            border-radius: 0 4px 4px 0;
+            margin-top: 20px;
         }
 
-        .testimonial-container {
-            max-width: 750px;
-            margin: 0 auto;
+        .endorsement-label {
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: #D4AF37;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 12px;
         }
 
         .quote-text {
-            font-size: 1.3rem;
+            font-size: 1.1rem;
             font-style: italic;
             color: #333333;
-            line-height: 1.8;
-            margin-bottom: 24px;
+            line-height: 1.75;
+            margin-bottom: 16px;
         }
 
         .quote-author {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
             color: #001f3f;
-            letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         /* ==========================================
-           6. PATHWAYS GRID SECTION
+           5. UPGRADED PATHWAYS SECTION
            ========================================== */
         #pathways {
             padding: 100px 20px;
-            max-width: 1100px;
+            max-width: 1140px;
             margin: 0 auto;
         }
 
-        #pathways h2 {
-            font-size: 1.8rem;
-            color: #001f3f;
-            margin-bottom: 48px;
+        #pathways .section-header {
             text-align: center;
+            margin-bottom: 55px;
+        }
+
+        #pathways .section-header h2 {
+            font-size: 2rem;
+            color: #001f3f;
             font-weight: 700;
+            margin-bottom: 12px;
+        }
+
+        #pathways .section-header p {
+            color: #666666;
+            font-size: 1.05rem;
+            max-width: 600px;
+            margin: 0 auto;
         }
 
         .grid-container {
             display: flex;
             flex-wrap: wrap;
-            gap: 30px;
+            gap: 24px;
             justify-content: center;
         }
 
         .card {
             flex: 1;
-            min-width: 300px;
-            max-width: 340px;
+            min-width: 320px;
+            max-width: 360px;
             border: 1px solid #eaeaea;
             background-color: #FFFFFF;
-            padding: 35px 30px;
-            border-radius: 4px;
-            border-top: 3px solid #001f3f;
-            transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
+            padding: 40px 30px;
+            border-radius: 6px;
+            position: relative;
+            transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
         }
 
         .card:hover {
-            border-top-color: #D4AF37;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            transform: translateY(-4px);
+            border-color: #D4AF37;
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        /* Micro Badge labels inside the cards for added professional structure */
+        .card-badge {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            padding: 4px 10px;
+            background-color: #f0f4f8;
+            color: #001f3f;
+            border-radius: 4px;
+            margin-bottom: 20px;
+        }
+
+        .card:nth-child(2) .card-badge {
+            background-color: #fef8e7;
+            color: #b28900;
         }
 
         .card h3 {
-            font-size: 1.25rem;
+            font-size: 1.35rem;
             color: #001f3f;
             margin-bottom: 16px;
-            font-weight: 600;
-            letter-spacing: -0.2px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
         }
 
         .card p {
             color: #555555;
-            font-size: 0.95rem;
-            line-height: 1.65;
+            font-size: 0.98rem;
+            line-height: 1.7;
         }
 
         /* ==========================================
-           7. REGISTRATION / ADMISSION SECTION
+           6. REGISTRATION / ADMISSION SECTION
            ========================================== */
         #registration {
             padding: 110px 20px;
@@ -252,20 +282,8 @@
             line-height: 1.7;
         }
 
-        #registration .cta-button {
-            background-color: #001f3f; /* Deep Dark Contrast for Bottom Action */
-            border-color: #001f3f;
-            color: #FFFFFF;
-        }
-
-        #registration .cta-button:hover {
-            background-color: #D4AF37;
-            border-color: #D4AF37;
-            color: #FFFFFF;
-        }
-
         /* ==========================================
-           8. FOOTER STYLING
+           7. FOOTER STYLING
            ========================================== */
         footer {
             text-align: center;
@@ -277,13 +295,9 @@
         }
 
         /* ==========================================
-           9. RESPONSIVE BREAKPOINTS
+           8. RESPONSIVE BREAKPOINTS
            ========================================== */
         @media (max-width: 768px) {
-            header {
-                position: relative;
-            }
-            
             .nav-container {
                 flex-direction: column;
                 gap: 16px;
@@ -300,19 +314,15 @@
             }
 
             #hero h1 {
-                font-size: 1.8rem;
+                font-size: 1.9rem;
             }
 
-            #hero p {
-                font-size: 1.1rem;
-            }
-
-            #philosophy, #endorsement, #pathways, #registration {
+            #about-framework, #pathways, #registration {
                 padding: 60px 20px;
             }
 
-            .quote-text {
-                font-size: 1.15rem;
+            .academic-endorsement {
+                padding: 20px;
             }
 
             .grid-container {
@@ -335,7 +345,7 @@
             <a href="#" class="logo">W-ELITE PRO</a>
             <nav>
                 <a href="#hero">Home</a>
-                <a href="#philosophy">Philosophy</a>
+                <a href="#about-framework">Philosophy</a>
                 <a href="#pathways">Pathways</a>
                 <a href="#registration">Admission</a>
             </nav>
@@ -349,15 +359,16 @@
         <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Apply for Admission</a>
     </section>
 
-    <!-- Philosophy Section -->
-    <section id="philosophy">
-        <h2>The Academic Standard</h2>
-        <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
-    </section>
+    <!-- Unified Philosophy & Recommendation Section -->
+    <section id="about-framework">
+        <div class="philosophy-block">
+            <h2>The Academic Standard</h2>
+            <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
+        </div>
 
-    <!-- Academic Recommendation Section -->
-    <section id="endorsement">
-        <div class="testimonial-container">
+        <!-- Integrated Peer Endorsement -->
+        <div class="academic-endorsement">
+            <div class="endorsement-label">Institutional Endorsement</div>
             <p class="quote-text">
                 "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
             </p>
@@ -365,26 +376,33 @@
         </div>
     </section>
 
-    <!-- Pathways Section -->
+    <!-- Restructured Training Pathways Section -->
     <section id="pathways">
-        <h2>Elite Training Pathways</h2>
+        <div class="section-header">
+            <h2>Elite Training Pathways</h2>
+            <p>Targeted curriculum blocks built for distinctive professional and academic milestones.</p>
+        </div>
+
         <div class="grid-container">
             
             <!-- Pathway 1 -->
             <div class="card">
+                <div class="card-badge">Fluency Framework</div>
                 <h3>W-Core</h3>
                 <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
             </div>
 
             <!-- Pathway 2 -->
             <div class="card">
-                <h3>W-Ultra (IELTS Preparation)</h3>
-                <p>Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
+                <div class="card-badge">Examination Matrix</div>
+                <h3>W-Ultra</h3>
+                <p><strong>IELTS Preparation:</strong> Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
             </div>
 
             <!-- Pathway 3 -->
             <div class="card">
                 <h3>W-PACE</h3>
+                <div class="card-badge">Executive Track</div>
                 <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
             </div>
 
