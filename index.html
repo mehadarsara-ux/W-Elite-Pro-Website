@@ -116,7 +116,7 @@
         }
 
         /* ==========================================
-           4. PHILOSOPHY SECTION (MINIMALIST PROSE)
+           4. INTRO & RECOMMENDATION SECTION
            ========================================== */
         #philosophy {
             padding: 100px 20px;
@@ -124,58 +124,49 @@
             margin: 0 auto;
         }
 
+        #philosophy p.intro-text {
+            font-size: 1.15rem;
+            color: #444444;
+            line-height: 1.85;
+            margin-bottom: 48px;
+        }
+
         #philosophy h2 {
-            font-size: 1.8rem;
+            font-size: 1.5rem;
             color: #001f3f; /* Deep Navy */
             margin-bottom: 24px;
             font-weight: 700;
             letter-spacing: -0.3px;
-        }
-
-        #philosophy p {
-            font-size: 1.15rem;
-            color: #444444;
-            line-height: 1.85;
-        }
-
-        /* ==========================================
-           5. TESTIMONIAL / RECOMMENDATION SECTION
-           ========================================== */
-        #endorsement {
-            background-color: #fafafa;
-            padding: 90px 20px;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-            text-align: center;
-        }
-
-        .testimonial-container {
-            max-width: 750px;
-            margin: 0 auto;
+            border-left: 3px solid #D4AF37;
+            padding-left: 15px;
         }
 
         .quote-text {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-style: italic;
             color: #333333;
             line-height: 1.8;
-            margin-bottom: 24px;
-            position: relative;
+            margin-bottom: 16px;
         }
 
         .quote-author {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
-            color: #001f3f;
+            color: #555555;
             letter-spacing: 0.5px;
-            text-transform: uppercase;
         }
 
         /* ==========================================
-           6. PATHWAYS GRID SECTION
+           5. PATHWAYS GRID SECTION
            ========================================== */
         #pathways {
             padding: 100px 20px;
+            background-color: #fafafa;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+        }
+
+        .pathways-container {
             max-width: 1100px;
             margin: 0 auto;
         }
@@ -228,13 +219,12 @@
         }
 
         /* ==========================================
-           7. REGISTRATION / ADMISSION SECTION
+           6. REGISTRATION / ADMISSION SECTION
            ========================================== */
         #registration {
             padding: 110px 20px;
             text-align: center;
-            background-color: #fafafa;
-            border-top: 1px solid #eaeaea;
+            background-color: #FFFFFF;
             border-bottom: 1px solid #eaeaea;
         }
 
@@ -267,7 +257,7 @@
         }
 
         /* ==========================================
-           8. FOOTER STYLING
+           7. FOOTER STYLING
            ========================================== */
         footer {
             text-align: center;
@@ -279,7 +269,7 @@
         }
 
         /* ==========================================
-           9. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
+           8. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
            ========================================== */
         @media (max-width: 768px) {
             header {
@@ -309,8 +299,12 @@
                 font-size: 1.1rem;
             }
 
-            #philosophy, #endorsement, #pathways, #registration {
+            #philosophy, #pathways, #registration {
                 padding: 60px 20px;
+            }
+
+            #philosophy p.intro-text {
+                margin-bottom: 32px;
             }
 
             .quote-text {
@@ -351,14 +345,13 @@
         <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Apply for Admission</a>
     </section>
 
-    <!-- Philosophy Section -->
+    <!-- Philosophy & Recommendation Section -->
     <section id="philosophy">
-        <h2>The Academic Standard</h2>
-        <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
-    </section>
-
-    <!-- Academic Recommendation Section -->
-    <section id="endorsement">
+        <p class="intro-text">
+            W-Elite Pro was founded to bridge the gap between general English language proficiency and rigorous demands of today's international academic and professional environments. Led by university-vetted doctoral expertise, our programs transition learners away from standard textbook drills toward advanced rhetoric and contextual discourse. This specialized training empowers ambitious candidates to assert their voice confidently on a global stage.
+        </p>
+        
+        <h2>Academic Recommendation:</h2>
         <div class="testimonial-container">
             <p class="quote-text">
                 "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
@@ -369,27 +362,29 @@
 
     <!-- Pathways Section -->
     <section id="pathways">
-        <h2>Elite Training Pathways</h2>
-        <div class="grid-container">
-            
-            <!-- Pathway 1 -->
-            <div class="card">
-                <h3>W-Core</h3>
-                <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
-            </div>
+        <div class="pathways-container">
+            <h2>Elite Training Pathways</h2>
+            <div class="grid-container">
+                
+                <!-- Pathway 1 -->
+                <div class="card">
+                    <h3>W-Core</h3>
+                    <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
+                </div>
 
-            <!-- Pathway 2 -->
-            <div class="card">
-                <h3>W-Ultra (IELTS Preparation)</h3>
-                <p>Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
-            </div>
+                <!-- Pathway 2 -->
+                <div class="card">
+                    <h3>W-Ultra (IELTS Preparation)</h3>
+                    <p>Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
+                </div>
 
-            <!-- Pathway 3 -->
-            <div class="card">
-                <h3>W-PACE</h3>
-                <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
-            </div>
+                <!-- Pathway 3 -->
+                <div class="card">
+                    <h3>W-PACE</h3>
+                    <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
+                </div>
 
+            </div>
         </div>
     </section>
 
