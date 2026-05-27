@@ -24,11 +24,11 @@
         }
 
         /* ==========================================
-           2. PREMIUM NAVIGATION BAR (DARK THEME FIXED)
+           2. PREMIUM BC-STYLE NAVIGATION BAR
            ========================================== */
         header {
             background-color: #001f3f; /* Institutional Deep Navy */
-            border-bottom: 1px solid #001122;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -40,30 +40,57 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 20px;
+            padding: 22px 20px;
         }
 
         .logo {
-            font-size: 1.3rem;
+            font-size: 1.25rem;
             font-weight: 800;
-            letter-spacing: 1.5px;
-            color: #FFFFFF !important; /* Locked to stark white to never vanish */
+            letter-spacing: 2px;
+            color: #FFFFFF !important;
             text-decoration: none;
             display: inline-block;
         }
 
+        nav {
+            display: flex;
+            align-items: center;
+        }
+
         nav a {
-            color: #E0E0E0;
+            color: #E5E5E5;
             text-decoration: none;
-            margin-left: 30px;
-            font-size: 0.9rem;
+            margin-left: 35px;
+            font-size: 0.8rem;
             font-weight: 500;
-            letter-spacing: 0.5px;
-            transition: color 0.2s ease;
+            text-transform: uppercase; /* Editorial corporate aesthetic */
+            letter-spacing: 1.2px;     /* Executive corporate tracking */
+            position: relative;
+            padding: 6px 0;
+            transition: color 0.3s ease;
+        }
+
+        /* The Sleek BC Animated Micro-Underline */
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #D4AF37; /* Premium Gold Line */
+            transform: scaleX(0);
+            transform-origin: right;
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         nav a:hover {
-            color: #D4AF37; /* Premium Gold Accent */
+            color: #FFFFFF;
+        }
+
+        nav a:hover::after {
+            transform: scaleX(1);
+            transform-origin: left;
         }
 
         /* ==========================================
@@ -289,13 +316,13 @@
         @media (max-width: 768px) {
             .nav-container {
                 flex-direction: column;
-                gap: 16px;
-                padding: 15px 20px;
+                gap: 20px;
+                padding: 20px;
             }
             
             nav a {
-                margin: 0 12px;
-                font-size: 0.85rem;
+                margin: 0 14px;
+                font-size: 0.75rem;
             }
 
             #hero {
@@ -359,7 +386,7 @@
         <div class="testimonial-container">
             <h3 class="quote-title">Academic Recommendation</h3>
             <p class="quote-text">
-                "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
+                "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals." [cite: Evidence: CV details and repeated requests for classroom management strategies and lesson plans. Conversation Date: 2025-11 to 2026-05., Discussion of their 17-year friendship and detailed planning for a shared business venture. Conversation Date: 2026-02 to 2026-03.]
             </p>
             <p class="quote-author">— Prof. F. Benyelles Bedjaoui</p>
         </div>
