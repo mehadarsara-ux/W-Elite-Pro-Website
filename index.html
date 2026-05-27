@@ -4,25 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>W-Elite Pro</title>
-    <!-- Premium Google Fonts Integration -->
+    
+    <!-- Premium Typography Integration -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
     
     <style>
         /* ==========================================
-           1. PREMIUM RESET & MASTER TYPOGRAPHY
+           1. MODERN EDITORIAL RESET & TOKENS
            ========================================== */
+        :root {
+            --bg-master: #030a16;      /* Intensely deep, quiet ink navy */
+            --accent-gold: #dfb743;    /* Refined raw silk gold */
+            --text-pure: #FFFFFF;
+            --text-editorial: rgba(255, 255, 255, 0.75);
+            --text-caption: rgba(255, 255, 255, 0.4);
+            --border-line: rgba(255, 255, 255, 0.08);
+            --bezier-smooth: all 0.7s cubic-bezier(0.19, 1, 0.22, 1);
+        }
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
             -webkit-font-smoothing: antialiased;
+            scroll-behavior: smooth;
         }
 
         body {
-            background-color: #001329; /* Deep luxury navy base background */
-            color: #FFFFFF;
+            background-color: var(--bg-master);
+            color: var(--text-pure);
             font-family: 'Inter', sans-serif;
             line-height: 1.8;
             overflow-x: hidden;
@@ -30,452 +42,326 @@
 
         h1, h2, h3 {
             font-family: 'Playfair Display', serif;
-            letter-spacing: -0.3px;
+            font-weight: 400;
         }
 
         /* ==========================================
-           2. EXECUTIVE ULTRA-SLIM NAVIGATION
+           2. ULTRA-MINIMAL INSTITUTIONAL HEADER
            ========================================== */
         header {
-            background-color: rgba(0, 19, 41, 0.85); 
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-            position: sticky;
+            position: absolute;
             top: 0;
+            left: 0;
+            width: 100%;
             z-index: 1000;
+            border-bottom: 1px solid var(--border-line);
         }
 
         .nav-container {
-            max-width: 1200px;
+            max-width: 1440px;
             margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 40px;
+            padding: 35px 80px;
         }
 
         .logo {
             font-family: 'Inter', sans-serif;
-            font-size: 1.1rem;
-            font-weight: 600;
-            letter-spacing: 4px;
-            color: #FFFFFF !important;
+            font-size: 0.85rem;
+            font-weight: 500;
+            letter-spacing: 6px;
+            color: var(--text-pure);
             text-decoration: none;
+            transition: var(--bezier-smooth);
+        }
+
+        .logo:hover {
+            color: var(--accent-gold);
         }
 
         .nav-right {
             display: flex;
             align-items: center;
-        }
-
-        nav {
-            display: flex;
-            align-items: center;
+            gap: 50px;
         }
 
         nav a {
-            font-family: 'Inter', sans-serif;
-            color: rgba(255, 255, 255, 0.65);
+            color: var(--text-editorial);
             text-decoration: none;
-            margin-right: 45px;
-            font-size: 0.75rem;
-            font-weight: 500;
+            font-size: 0.7rem;
+            font-weight: 400;
             text-transform: uppercase; 
-            letter-spacing: 2px;     
-            position: relative;
-            padding: 6px 0;
-            transition: color 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 100%;
-            height: 1px;
-            background-color: #D4AF37; 
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+            letter-spacing: 3px;     
+            margin-left: 45px;
+            transition: var(--bezier-smooth);
         }
 
         nav a:hover {
-            color: #FFFFFF;
+            color: var(--accent-gold);
         }
 
-        nav a:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-        }
-
-        /* Minimalist Language Switcher Styling */
         .lang-switcher {
             display: flex;
             align-items: center;
-            gap: 8px;
-            font-size: 0.75rem;
-            font-weight: 600;
-            letter-spacing: 1.5px;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
-            padding-left: 25px;
+            gap: 10px;
+            font-size: 0.65rem;
+            letter-spacing: 2px;
+            border-left: 1px solid var(--border-line);
+            padding-left: 30px;
         }
 
         .lang-btn {
             background: none;
             border: none;
-            color: rgba(255, 255, 255, 0.4);
+            color: var(--text-caption);
             cursor: pointer;
-            padding: 4px 2px;
+            font-weight: 500;
             transition: color 0.3s ease;
-            font-weight: 600;
         }
 
         .lang-btn.active {
-            color: #D4AF37;
-        }
-
-        .lang-btn:hover {
-            color: #FFFFFF;
-        }
-
-        .lang-divider {
-            color: rgba(255, 255, 255, 0.2);
-            user-select: none;
+            color: var(--accent-gold);
         }
 
         /* ==========================================
-           3. UNIFIED PAGE SECTIONS
-           ========================================== */
-        .web-section {
-            padding: 140px 40px;
-            width: 100%;
-        }
-
-        /* ==========================================
-           4. EDITORIAL HERO AREA (WITH GEOMETRIC MATRIX)
+           3. ASYMMETRICAL MAGAZINE HERO SECTION
            ========================================== */
         #hero-container {
-            padding: 200px 40px;
-            text-align: center;
-            background: 
-                linear-gradient(rgba(255,255,255,0.01) 1px, transparent 1px) 0 0 / 50px 50px,
-                linear-gradient(90deg, rgba(255,255,255,0.01) 1px, transparent 1px) 0 0 / 50px 50px,
-                radial-gradient(circle at top, #00254a 0%, #001329 75%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 260px 80px 160px 80px;
+            display: grid;
+            grid-template-columns: 1.2fr 0.8fr;
+            gap: 80px;
+            align-items: start;
         }
 
-        #hero-container h1 {
-            font-size: 2.5rem;
-            color: #FFFFFF; 
-            max-width: 1000px;
-            margin: 0 auto 30px auto;
-            line-height: 1.25;
-            font-weight: 600;
+        .hero-left h1 {
+            font-size: 4.5rem;
+            line-height: 1.15;
+            color: var(--text-pure);
+            margin-bottom: 20px;
         }
 
-        #hero-container p {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.7);
-            max-width: 780px;
-            margin: 0 auto 55px auto;
+        .hero-right {
+            border-left: 1px solid var(--border-line);
+            padding-left: 60px;
+            padding-top: 20px;
+        }
+
+        .hero-right p {
+            font-size: 1.1rem;
+            color: var(--text-editorial);
             font-weight: 300;
+            line-height: 2;
+            margin-bottom: 50px;
         }
 
+        /* Pure Editorial Button */
         .cta-button {
             font-family: 'Inter', sans-serif;
-            background-color: #D4AF37; 
-            color: #FFFFFF;
-            padding: 18px 42px;
+            color: var(--text-pure);
             text-decoration: none;
-            font-weight: 600;
-            font-size: 0.8rem;
+            font-size: 0.7rem;
             text-transform: uppercase;
-            letter-spacing: 2.5px;
-            border-radius: 0px; 
-            display: inline-block;
-            transition: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
-            border: 1px solid #D4AF37;
-            box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15);
+            letter-spacing: 3px;
+            display: inline-flex;
+            align-items: center;
+            gap: 15px;
+            transition: var(--bezier-smooth);
+            padding-bottom: 6px;
+            border-bottom: 1px solid var(--accent-gold);
         }
 
         .cta-button:hover {
-            background-color: #FFFFFF;
-            color: #001329;
-            border-color: #FFFFFF;
-            transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            color: var(--accent-gold);
+            padding-left: 10px;
         }
 
-        /* ==========================================
-           TYPEWRITER EFFECT STYLING
-           ========================================== */
         .typewriter-glow {
-            color: #D4AF37; 
-            text-shadow: 0 0 10px rgba(212, 175, 55, 0.2);
-            border-right: 2px solid #D4AF37; 
-            padding-right: 4px;
-            animation: blinkCursor 0.8s step-end infinite;
+            color: var(--accent-gold); 
+            border-right: 1px solid var(--accent-gold); 
+            padding-right: 6px;
+            font-style: italic;
+            animation: blinkCursor 0.9s step-end infinite;
         }
 
         @keyframes blinkCursor {
             from, to { border-color: transparent }
-            50% { border-color: #D4AF37; }
+            50% { border-color: var(--accent-gold); }
         }
 
         /* ==========================================
-           5. PHILOSOPHY SECTION (CLEAN WHITE EDIT)
+           4. EDITORIAL PHILOSOPHY OVERVIEW
            ========================================== */
-        #philosophy-section {
-            background-color: #FFFFFF; 
-            color: #111111;            
-            border-bottom: 1px solid #EEEEEE;
+        .editorial-section {
+            max-width: 1440px;
+            margin: 0 auto;
+            padding: 140px 80px;
+            border-top: 1px solid var(--border-line);
         }
 
-        #philosophy {
-            max-width: 900px;
-            margin: 0 auto;
+        .philosophy-layout {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 100px;
+        }
+
+        .section-label {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            color: var(--accent-gold);
+            font-weight: 500;
         }
 
         .philosophy-content h2 {
-            font-size: 2.6rem;
-            color: #001329;            
-            margin-bottom: 35px;
-            font-weight: 600;
+            font-size: 3rem;
+            line-height: 1.25;
+            margin-bottom: 40px;
+            color: var(--text-pure);
         }
 
         .philosophy-content p {
-            font-family: 'Inter', sans-serif;
             font-size: 1.15rem;
-            color: #444444;            
-            line-height: 1.9;
-            margin-bottom: 60px;
+            color: var(--text-editorial);
             font-weight: 300;
+            line-height: 2;
+            margin-bottom: 80px;
         }
 
-        .testimonial-container {
-            border-left: 2px solid #D4AF37; 
-            padding: 45px;
-            background-color: #FAFAFA; 
-            border-radius: 0 4px 4px 0;
-            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.015);
-        }
-
-        .quote-title {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            color: #D4AF37;
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2.5px;
-            margin-bottom: 20px;
+        /* Large Print Elegant Quote Block */
+        .endorsement-block {
+            padding-top: 60px;
+            border-top: 1px solid var(--border-line);
         }
 
         .quote-text {
-            font-size: 1.3rem;
-            font-style: italic;
-            color: #222222;
+            font-size: 1.6rem;
+            line-style: italic;
+            font-weight: 300;
             line-height: 1.8;
-            margin-bottom: 24px;
-            font-weight: 400;
+            color: var(--text-pure);
+            margin-bottom: 30px;
         }
 
         .quote-author {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
-            font-weight: 600;
-            color: #001329;
+            font-size: 0.8rem;
             text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--text-caption);
+        }
+
+        /* ==========================================
+           5. UNBOXED CATALOGUE (Goodbye Grids & Boxes)
+           ========================================== */
+        .catalogue-list {
+            margin-top: 80px;
+        }
+
+        .catalogue-item {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr 1fr;
+            gap: 40px;
+            padding: 60px 0;
+            border-top: 1px solid var(--border-line);
+            align-items: start;
+            transition: var(--bezier-smooth);
+        }
+
+        .catalogue-item:hover {
+            border-top-color: var(--accent-gold);
+        }
+
+        .cat-num {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.5rem;
+            color: var(--text-caption);
+            font-style: italic;
+            transition: var(--bezier-smooth);
+        }
+
+        .catalogue-item:hover .cat-num {
+            color: var(--accent-gold);
+            transform: translateX(5px);
+        }
+
+        .cat-meta h3 {
+            font-size: 2.2rem;
+            color: var(--text-pure);
+            margin-bottom: 10px;
+        }
+
+        .cat-focus {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent-gold);
+            font-weight: 500;
+        }
+
+        .cat-desc {
+            font-size: 1.05rem;
+            color: var(--text-editorial);
+            font-weight: 300;
+            line-height: 1.9;
+        }
+
+        /* ==========================================
+           6. CLEAN INTUITIVE FOOTER
+           ========================================== */
+        footer {
+            border-top: 1px solid var(--border-line);
+            padding: 80px 80px;
+        }
+
+        .footer-wrap {
+            max-width: 1440px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .footer-wrap p {
+            font-size: 0.75rem;
+            color: var(--text-caption);
             letter-spacing: 1px;
         }
 
         /* ==========================================
-           6. HIGH-END EDITORIAL WHITE GRID PLATFORMS
+           7. MODERN RESPONSIVENESS
            ========================================== */
-        #offerings-section {
-            background-color: #FFFFFF; 
-            color: #111111;            
-            padding-top: 40px;         
-        }
-
-        #offerings {
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        #offerings h2 {
-            font-size: 2.6rem;
-            color: #001329;            
-            margin-bottom: 16px;
-            text-align: center;
-            font-weight: 600;
-        }
-
-        .section-subtitle {
-            font-family: 'Inter', sans-serif;
-            text-align: center;
-            color: #666666;
-            font-size: 1.1rem;
-            margin-bottom: 90px;
-            max-width: 650px;
-            margin-left: auto;
-            margin-right: auto;
-            font-weight: 300;
-        }
-
-        .grid-container {
-            display: grid;
-            grid-template-columns: repeat(3, 1fr);
-            gap: 35px;
-        }
-
-        .card {
-            background-color: #001329; 
-            border: 1px solid rgba(0, 19, 41, 0.05);
-            padding: 60px 45px;
-            border-radius: 0px; 
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                        box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
-                        border-color 0.5s ease;
-        }
-
-        .card::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 3px;
-            background-color: transparent;
-            transition: background-color 0.4s ease;
-        }
-
-        .card:hover {
-            transform: translateY(-15px); 
-            border-color: rgba(212, 175, 55, 0.4);
-            box-shadow: 0 40px 80px rgba(0, 19, 41, 0.22); 
-        }
-
-        .card:hover::before {
-            background-color: #D4AF37; 
-        }
-
-        .card-icon {
-            color: #D4AF37;
-            margin-bottom: 28px;
-            display: flex;
-            align-items: center;
-            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-        }
-
-        .card:hover .card-icon {
-            transform: scale(1.08);
-        }
-
-        .card h3 {
-            font-size: 1.8rem;
-            color: #FFFFFF;
-            margin-bottom: 24px;
-            font-weight: 600;
-        }
-
-        .card p {
-            font-family: 'Inter', sans-serif;
-            color: rgba(255, 255, 255, 0.7);
-            font-size: 0.95rem;
-            line-height: 1.8;
-            font-weight: 300;
-            margin-bottom: 30px;
-            flex-grow: 1; 
-        }
-
-        .card-metric {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.7rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: #FFFFFF;
-            background-color: rgba(255, 255, 255, 0.04);
-            padding: 6px 14px;
-            border-left: 2px solid #D4AF37;
-            display: inline-block;
-            margin-top: auto;
-            width: fit-content;
-            font-weight: 400;
-        }
-
-        /* ==========================================
-           7. FOOTER STYLING
-           ========================================== */
-        footer {
-            text-align: center;
-            padding: 90px 40px;
-            color: rgba(255, 255, 255, 0.35);
-            font-size: 0.8rem;
-            background-color: #000c1a;
-            border-top: 1px solid rgba(255, 255, 255, 0.03);
-            letter-spacing: 0.5px;
-        }
-
-        /* ==========================================
-           8. RESPONSIVE BREAKPOINTS
-           ========================================== */
-        @media (max-width: 1024px) {
-            .grid-container {
-                grid-template-columns: repeat(2, 1fr);
-                gap: 25px;
+        @media (max-width: 1100px) {
+            #hero-container, .philosophy-layout, .catalogue-item {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+            .hero-right {
+                border-left: none;
+                padding-left: 0;
+                padding-top: 0;
+            }
+            .catalogue-item {
+                padding: 40px 0;
             }
         }
 
         @media (max-width: 768px) {
-            .nav-container {
-                flex-direction: column;
-                gap: 20px;
-                padding: 20px;
-            }
-            
-            nav a {
-                margin: 0 10px;
-                font-size: 0.7rem;
-            }
-
-            .lang-switcher {
-                border-left: none;
-                padding-left: 0;
-                margin-top: 5px;
-            }
-
-            #hero-container {
-                padding: 140px 20px;
-            }
-
-            #hero-container h1 {
-                font-size: 2.3rem;
-            }
-
-            .web-section {
-                padding: 90px 20px;
-            }
-
-            .grid-container {
-                grid-template-columns: 1fr;
-            }
-
-            .card {
-                padding: 45px 35px;
-            }
+            .nav-container { padding: 30px 40px; flex-direction: column; gap: 20px; }
+            nav a { margin: 0 15px; }
+            #hero-container, .editorial-section { padding: 160px 40px 80px 40px; }
+            .hero-left h1 { font-size: 3rem; }
+            .philosophy-content h2 { font-size: 2.2rem; }
+            .cat-meta h3 { font-size: 1.8rem; }
+            footer { padding: 60px 40px; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header & Navigation -->
+    <!-- Header Layer -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">W-ELITE PRO</a>
@@ -485,33 +371,39 @@
                     <a href="#philosophy-section" class="lang-text" data-en="Philosophy" data-fr="Philosophie">Philosophy</a>
                     <a href="#offerings-section" class="lang-text" data-en="Offerings" data-fr="Programmes">Offerings</a>
                 </nav>
-                <!-- Luxury Language Toggle Module -->
                 <div class="lang-switcher">
                     <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <span class="lang-divider">|</span>
+                    <span style="color:rgba(255,255,255,0.1)">|</span>
                     <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 1. HERO HOME AREA -->
-    <div id="hero-container">
-        <h1>
-            <span class="lang-text" data-en="W-Elite for " data-fr="W-Elite pour ">W-Elite for </span><span id="typewriter" class="typewriter-glow"></span>
-        </h1>
-        <p class="lang-text"
-           data-en="W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Driven by PhD-led expertise, our pathways go beyond basic textbooks and grammar to master the nuances of academic and premium business communication."
-           data-fr="W-Elite Pro a été fondé pour combler le fossé entre la maîtrise générale de la langue et les exigences rigoureuses du monde universitaire international et des affaires. Propulsés par une expertise de niveau doctorat, nos parcours dépassent les manuels de base pour maîtriser les nuances de la communication académique et exécutive.">
-            W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Driven by PhD-led expertise, our pathways go beyond basic textbooks and grammar to master the nuances of academic and premium business communication.
-        </p>
-        <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button lang-text"
-           data-en="Apply for Admission" data-fr="S'inscrire">Apply for Admission</a>
-    </div>
+    <!-- Asymmetrical Magazine Hero -->
+    <main id="hero-container">
+        <div class="hero-left">
+            <h1>
+                <span class="lang-text" data-en="W-Elite for " data-fr="W-Elite pour ">W-Elite for </span><br><span id="typewriter" class="typewriter-glow"></span>
+            </h1>
+        </div>
+        <div class="hero-right">
+            <p class="lang-text"
+               data-en="W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Driven by PhD-led expertise, our pathways go beyond basic textbooks and grammar to master the nuances of academic and premium business communication."
+               data-fr="W-Elite Pro a été fondé pour combler le fossé entre la maîtrise générale de la langue et les exigences rigoureuses du monde universitaire international et des affaires. Propulsés par une expertise de niveau doctorat, nos parcours dépassent les manuels de base pour maîtriser les nuances de la communication académique et exécutive.">
+                W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Driven by PhD-led expertise, our pathways go beyond basic textbooks and grammar to master the nuances of academic and premium business communication.
+            </p>
+            <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">
+                <span class="lang-text" data-en="Apply for Admission" data-fr="S'inscrire">Apply for Admission</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </a>
+        </div>
+    </main>
 
-    <!-- 2. PHILOSOPHY SECTION -->
-    <section id="philosophy-section" class="web-section">
-        <div id="philosophy">
+    <!-- Split Philosophy Overview Section -->
+    <section id="philosophy-section" class="editorial-section">
+        <div class="philosophy-layout">
+            <div class="section-label lang-text" data-en="01 / Institutional Vision" data-fr="01 / Vision Institutionnelle">01 / Institutional Vision</div>
             <div class="philosophy-content">
                 <h2 class="lang-text" data-en="The Academic Standard" data-fr="Le Standard Académique">The Academic Standard</h2>
                 <p class="lang-text"
@@ -519,11 +411,8 @@
                    data-fr="W-Elite Pro a été fondé pour combler le fossé entre la maîtrise générale de la langue et les exigences rigoureuses du monde universitaire international et des affaires. Propulsés par une expertise de niveau doctorat, nos parcours dépassent les manuels de base pour maîtriser les nuances de la communication académique et exécutive.">
                     W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Driven by PhD-led expertise, our pathways go beyond basic textbooks and grammar to master the nuances of academic and premium business communication.
                 </p>
-            </div>
 
-            <div class="academic-endorsement">
-                <div class="testimonial-container">
-                    <h3 class="quote-title lang-text" data-en="Academic Recommendation" data-fr="Recommandation Académique">Academic Recommendation</h3>
+                <div class="endorsement-block">
                     <p class="quote-text lang-text"
                        data-en='"Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."'
                        data-fr='"Que vous cherchiez à maîtriser les compétences de communication professionnelle ou à acquérir une aisance académique, l’approche systématique et le style d’enseignement efficace de W-Elite Pro vous guideront vers vos objectifs."'>
@@ -535,90 +424,89 @@
         </div>
     </section>
 
-    <!-- 3. PREMIUM WHITE OFFERINGS GRID SECTION -->
-    <section id="offerings-section" class="web-section">
-        <div id="offerings">
-            <h2 class="lang-text" data-en="W-Elite Offerings" data-fr="Nos Programmes Elite">W-Elite Offerings</h2>
-            
-            <div class="grid-container">
-                
-                <!-- Offering 1: W-Core -->
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg>
-                    </div>
-                    <h3>W-Core</h3>
-                    <p class="lang-text"
-                       data-en="Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities."
-                       data-fr="Conçu pour les profils ambitieux désireux de parler et d'écrire en anglais avec assurance afin de débloquer des opportunités professionnelles majeures.">
-                        Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.
-                    </p>
-                    <div class="card-metric lang-text" data-en="Focus: General English/ Speaking" data-fr="Objectif : Anglais Général / Expression">Focus: General English/ Speaking</div>
-                </div>
-
-                <!-- Offering 2: W-Ultra -->
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
-                    </div>
-                    <h3>W-Ultra</h3>
-                    <p class="lang-text"
-                       data-en="Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility."
-                       data-fr="Entraînement stratégique rigoureux visant des scores élevés (Band 7+) pour les bourses internationales et la mobilité globale.">
-                        Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.
-                    </p>
-                    <div class="card-metric lang-text" data-en="Focus: Precision/Required Target" data-fr="Objectif : Précision / Cible Requise">Focus: Precision/Required Target</div>
-                </div>
-
-                <!-- Offering 3: W-PACE -->
-                <div class="card">
-                    <div class="card-icon">
-                        <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
-                    </div>
-                    <h3>W-PACE</h3>
-                    <p class="lang-text"
-                       data-en="Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals."
-                       data-fr="Cadres de communication de haut niveau spécifiquement conçus pour les enseignants universitaires, les cadres et les dirigeants.">
-                        Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.
-                    </p>
-                    <div class="card-metric lang-text" data-en="Professional Training & Communication" data-fr="Formation Professionnelle & Communication">Professional Training & Communication</div>
-                </div>
-
+    <!-- Unboxed Catalog Architecture Section -->
+    <section id="offerings-section" class="editorial-section">
+        <div class="philosophy-layout" style="gap:0;">
+            <div class="section-label lang-text" data-en="02 / Specialized Frameworks" data-fr="02 / Programmes Spécialisés">02 / Specialized Frameworks</div>
+            <div>
+                <h2 class="lang-text" data-en="Curated Frameworks" data-fr="Programmes d'Élite" style="font-size:3rem; margin-bottom:0;">Curated Frameworks</h2>
             </div>
+        </div>
+        
+        <div class="catalogue-list">
+            
+            <!-- Item 1 -->
+            <div class="catalogue-item">
+                <div class="cat-num">I</div>
+                <div class="cat-meta">
+                    <h3>W-Core</h3>
+                    <div class="cat-focus lang-text" data-en="General English / Speaking Fluency" data-fr="Anglais Général / Fluidité Verbale">General English / Speaking Fluency</div>
+                </div>
+                <div class="cat-desc lang-text"
+                     data-en="Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities."
+                     data-fr="Conçu pour les profils ambitieux désireux de parler et d'écrire en anglais avec assurance afin de débloquer des opportunités professionnelles majeures.">
+                    Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.
+                </div>
+            </div>
+
+            <!-- Item 2 -->
+            <div class="catalogue-item">
+                <div class="cat-num">II</div>
+                <div class="cat-meta">
+                    <h3>W-Ultra</h3>
+                    <div class="cat-focus lang-text" data-en="Precision / IELTS Mastery" data-fr="Précision / Maîtrise de l'IELTS">Precision / IELTS Mastery</div>
+                </div>
+                <div class="cat-desc lang-text"
+                     data-en="Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility."
+                     data-fr="Entraînement stratégique rigoureux visant des scores élevés (Band 7+) pour les bourses internationales et la mobilité globale.">
+                    Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.
+                </div>
+            </div>
+
+            <!-- Item 3 -->
+            <div class="catalogue-item">
+                <div class="cat-num">III</div>
+                <div class="cat-meta">
+                    <h3>W-PACE</h3>
+                    <div class="cat-focus lang-text" data-en="Executive Training & Academic Presence" data-fr="Formation Exécutive & Présence Académique">Executive Training & Academic Presence</div>
+                </div>
+                <div class="cat-desc lang-text"
+                     data-en="Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals demanding authoritative fluency."
+                     data-fr="Cadres de communication de haut niveau spécifiquement conçus pour les enseignants universitaires, les cadres et les dirigeants exigeant une aisance absolue.">
+                    Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals demanding authoritative fluency.
+                </div>
+            </div>
+
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Minimalist Footer -->
     <footer>
-        <p>&copy; 2026 W-Elite Pro Institute. All institutional rights reserved.</p>
+        <div class="footer-wrap">
+            <a href="#" class="logo" style="font-size:0.75rem;">W-ELITE PRO</a>
+            <p>&copy; 2026 W-Elite Pro Institute. All institutional rights reserved.</p>
+        </div>
     </footer>
 
-    <!-- Instant Language & Typewriter Handler Script -->
+    <!-- Script Handling -->
     <script>
-        // Language Toggle System
         function setLanguage(lang) {
             const elements = document.querySelectorAll('.lang-text');
             elements.forEach(el => {
                 const targetText = el.getAttribute(`data-${lang}`);
-                if (targetText) {
-                    el.innerHTML = targetText;
-                }
+                if (targetText) el.innerHTML = targetText;
             });
 
             const buttons = document.querySelectorAll('.lang-btn');
             buttons.forEach(btn => btn.classList.remove('active'));
             
-            // Cross-browser event handling safeguard
             const currentEvent = window.event;
             const activeBtn = currentEvent ? currentEvent.target : document.querySelector(`.lang-btn[onclick*="${lang}"]`);
-            if (activeBtn) {
-                activeBtn.classList.add('active');
-            }
+            if (activeBtn) activeBtn.classList.add('active');
 
             resetTypewriter();
         }
 
-        // Typewriter Mechanism
         const typewriterWords = {
             en: ["University teachers.", "Professionals.", "IELTS Takers.", "English learners."],
             fr: ["Enseignants universitaires.", "Professionnels.", "Candidats IELTS.", "apprenants d'anglais."]
@@ -647,15 +535,15 @@
             }
 
             currentElement.innerHTML = currentWord.substring(0, currentCharIndex);
-            let typeSpeed = isDeleting ? 50 : 100;
+            let typeSpeed = isDeleting ? 35 : 75;
 
             if (!isDeleting && currentCharIndex === currentWord.length) {
-                typeSpeed = 2000; 
+                typeSpeed = 2600; 
                 isDeleting = true;
             } else if (isDeleting && currentCharIndex === 0) {
                 isDeleting = false;
                 currentWordIndex = (currentWordIndex + 1) % words.length;
-                typeSpeed = 500; 
+                typeSpeed = 400; 
             }
 
             typewriterTimeout = setTimeout(type, typeSpeed);
@@ -669,9 +557,8 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(type, 800);
+            setTimeout(type, 500);
         });
     </script>
-
 </body>
 </html>
