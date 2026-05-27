@@ -100,7 +100,6 @@
         .web-section {
             padding: 140px 40px;
             width: 100%;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         /* ==========================================
@@ -140,7 +139,7 @@
             font-size: 0.85rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            border-radius: 0px; /* Sharp, tailored edge */
+            border-radius: 0px; 
             display: inline-block;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid #D4AF37;
@@ -156,6 +155,10 @@
         /* ==========================================
            5. PHILOSOPHY SECTION (DARK MASTER LAYER)
            ========================================== */
+        #philosophy-section {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
         #philosophy {
             max-width: 900px;
             margin: 0 auto;
@@ -209,8 +212,13 @@
         }
 
         /* ==========================================
-           6. HIGH-END EXECUTIVE GRID PLATFORMS
+           6. HIGH-END EDITORIAL WHITE GRID PLATFORMS
            ========================================== */
+        #offerings-section {
+            background-color: #FFFFFF; /* High-contrast editorial white canvas */
+            color: #111111;            /* Deep black text contrast */
+        }
+
         #offerings {
             max-width: 1200px;
             margin: 0 auto;
@@ -218,7 +226,7 @@
 
         #offerings h2 {
             font-size: 2.4rem;
-            color: #FFFFFF;
+            color: #001329;            /* Matches institutional navy tone */
             margin-bottom: 16px;
             text-align: center;
             font-weight: 700;
@@ -227,13 +235,13 @@
 
         .section-subtitle {
             text-align: center;
-            color: rgba(255, 255, 255, 0.5);
+            color: #555555;
             font-size: 1.05rem;
             margin-bottom: 80px;
             max-width: 600px;
             margin-left: auto;
             margin-right: auto;
-            font-weight: 300;
+            font-weight: 400;
         }
 
         .grid-container {
@@ -242,10 +250,10 @@
             gap: 30px;
         }
 
-        /* The Re-Imagined High-Prestige Card Structure */
+        /* Solid Luxury Navy Cards pop off the white canvas */
         .card {
-            background-color: rgba(255, 255, 255, 0.015);
-            border: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: #001329; 
+            border: 1px solid rgba(0, 19, 41, 0.1);
             padding: 55px 40px;
             border-radius: 4px;
             position: relative;
@@ -268,12 +276,11 @@
             transition: background-color 0.4s ease;
         }
 
-        /* The Beautiful Pop-Up Transition Effect */
+        /* The Beautiful Pop-Up Transition Effect against white */
         .card:hover {
-            transform: translateY(-10px) scale(1.02); /* Smooth fluid popup */
-            background-color: rgba(255, 255, 255, 0.03);
-            border-color: rgba(212, 175, 55, 0.3);
-            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
+            transform: translateY(-12px) scale(1.02); /* Crisp fluid popup action */
+            border-color: rgba(212, 175, 55, 0.5);
+            box-shadow: 0 35px 70px rgba(0, 19, 41, 0.18); /* Premium soft drop shadow */
         }
 
         .card:hover::before {
@@ -299,7 +306,7 @@
         }
 
         .card p {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.75);
             font-size: 0.95rem;
             line-height: 1.75;
         }
@@ -407,7 +414,7 @@
         </div>
     </section>
 
-    <!-- 3. OFFERINGS GRID SECTION -->
+    <!-- 3. PREMIUM WHITE OFFERINGS GRID SECTION -->
     <section id="offerings-section" class="web-section">
         <div id="offerings">
             <h2>W-Elite Offerings</h2>
@@ -440,7 +447,7 @@
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 W-Elite Pro. All  rights reserved.</p>
+        <p>&copy; 2026 W-Elite Pro Institute. All institutional rights reserved.</p>
     </footer>
 
 </body>
