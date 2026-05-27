@@ -45,9 +45,12 @@
         }
 
         .logo {
-            display: flex;
-            align-items: center;
+            font-size: 1.3rem;
+            font-weight: 800;
+            letter-spacing: 1.5px;
+            color: #001f3f !important; /* Forces Deep Institutional Navy */
             text-decoration: none;
+            display: inline-block;
         }
 
         nav a {
@@ -65,78 +68,56 @@
         }
 
         /* ==========================================
-           3. HERO SECTION (DEEP INSTITUTIONAL NAVY)
+           3. HERO SECTION (HIGH CONTRAST & RESPONSIVE)
            ========================================== */
         #hero {
-            padding: 140px 20px;
+            padding: 120px 20px;
             text-align: center;
             background-color: #001f3f; /* Deep Navy Background */
-            color: #FFFFFF; /* White Text for High Contrast */
-            border-bottom: 1px solid #00152b;
+            border-bottom: 1px solid #001122;
         }
 
         #hero h1 {
-            font-size: 2.8rem;
-            color: #FFFFFF; /* Stark White Headline */
-            max-width: 950px;
-            margin: 0 auto 28px auto;
+            font-size: 2.6rem;
+            color: #FFFFFF; /* Crisped to White for Contrast */
+            max-width: 900px;
+            margin: 0 auto 24px auto;
             line-height: 1.3;
             letter-spacing: -0.5px;
             font-weight: 700;
         }
 
         #hero p {
-            font-size: 1.25rem;
-            color: #E0E6ED; /* Soft Metallic Silver-Grey for readability */
-            max-width: 750px;
-            margin: 0 auto 45px auto;
-            line-height: 1.75;
+            font-size: 1.2rem;
+            color: #E0E0E0; /* Soft contrast grey for readability */
+            max-width: 700px;
+            margin: 0 auto 40px auto;
+            line-height: 1.7;
         }
 
-        /* Hero Button Variant (Gold Accent) */
-        #hero .cta-button {
-            background-color: #D4AF37; /* Premium Gold */
+        /* Premium Button Styling */
+        .cta-button {
+            background-color: #D4AF37; /* Premium Gold Accent for Hero Visibility */
             color: #FFFFFF;
-            padding: 15px 36px;
+            padding: 14px 32px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 1rem;
+            font-size: 0.95rem;
             letter-spacing: 0.5px;
             border-radius: 4px;
             display: inline-block;
-            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+            transition: background-color 0.2s ease, border-color 0.2s ease;
             border: 1px solid #D4AF37;
         }
 
-        #hero .cta-button:hover {
-            background-color: transparent;
-            color: #D4AF37;
-            border-color: #D4AF37;
-        }
-
-        /* Standard Navy Button for Content Blocks */
-        .cta-button {
-            background-color: #001f3f;
-            color: #FFFFFF;
-            padding: 15px 36px;
-            text-decoration: none;
-            font-weight: 600;
-            font-size: 1rem;
-            letter-spacing: 0.5px;
-            border-radius: 4px;
-            display: inline-block;
-            transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
-            border: 1px solid #001f3f;
-        }
-
         .cta-button:hover {
-            background-color: #ffffff;
+            background-color: #FFFFFF;
             color: #001f3f;
-            border-color: #001f3f;
+            border-color: #FFFFFF;
         }
 
         /* ==========================================
-           4. INTRO & RECOMMENDATION SECTION
+           4. PHILOSOPHY SECTION (MINIMALIST PROSE)
            ========================================== */
         #philosophy {
             padding: 100px 20px;
@@ -144,56 +125,64 @@
             margin: 0 auto;
         }
 
-        #philosophy p.intro-text {
-            font-size: 1.15rem;
-            color: #444444;
-            line-height: 1.85;
-            margin-bottom: 48px;
-        }
-
         #philosophy h2 {
-            font-size: 1.5rem;
+            font-size: 1.8rem;
             color: #001f3f; 
             margin-bottom: 24px;
             font-weight: 700;
             letter-spacing: -0.3px;
-            border-left: 3px solid #D4AF37;
-            padding-left: 15px;
         }
 
-        .quote-text {
-            font-size: 1.25rem;
-            font-style: italic;
-            color: #333333;
-            line-height: 1.8;
-            margin-bottom: 16px;
-        }
-
-        .quote-author {
-            font-size: 0.95rem;
-            font-weight: 700;
-            color: #555555;
-            letter-spacing: 0.5px;
+        #philosophy p {
+            font-size: 1.15rem;
+            color: #444444;
+            line-height: 1.85;
         }
 
         /* ==========================================
-           5. PATHWAYS GRID SECTION
+           5. TESTIMONIAL / RECOMMENDATION SECTION
+           ========================================== */
+        #endorsement {
+            background-color: #fafafa;
+            padding: 90px 20px;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #333333;
+            line-height: 1.8;
+            margin-bottom: 24px;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #001f3f;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================
+           6. PATHWAYS GRID SECTION
            ========================================== */
         #pathways {
             padding: 100px 20px;
-            background-color: #fafafa;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-        }
-
-        .pathways-container {
             max-width: 1100px;
             margin: 0 auto;
         }
 
         #pathways h2 {
             font-size: 1.8rem;
-            color: #001f3f; 
+            color: #001f3f;
             margin-bottom: 48px;
             text-align: center;
             font-weight: 700;
@@ -214,18 +203,18 @@
             background-color: #FFFFFF;
             padding: 35px 30px;
             border-radius: 4px;
-            border-top: 3px solid #001f3f; 
+            border-top: 3px solid #001f3f;
             transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card:hover {
-            border-top-color: #D4AF37; 
+            border-top-color: #D4AF37;
             box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
         }
 
         .card h3 {
             font-size: 1.25rem;
-            color: #001f3f; 
+            color: #001f3f;
             margin-bottom: 16px;
             font-weight: 600;
             letter-spacing: -0.2px;
@@ -238,33 +227,45 @@
         }
 
         /* ==========================================
-           6. REGISTRATION / ADMISSION (BRITISH COUNCIL INSPIRED)
+           7. REGISTRATION / ADMISSION SECTION
            ========================================== */
         #registration {
-            padding: 120px 20px;
+            padding: 110px 20px;
             text-align: center;
-            background-color: #f4f6f8; /* Premium Soft Metallic Grey Block */
+            background-color: #fafafa;
+            border-top: 1px solid #eaeaea;
             border-bottom: 1px solid #eaeaea;
         }
 
         #registration h2 {
-            font-size: 2rem;
-            color: #001f3f; 
-            margin-bottom: 20px;
+            font-size: 1.8rem;
+            color: #001f3f;
+            margin-bottom: 16px;
             font-weight: 700;
-            letter-spacing: -0.5px;
         }
 
         #registration p {
             font-size: 1.15rem;
             color: #444444;
-            max-width: 650px;
+            max-width: 600px;
             margin: 0 auto 40px auto;
-            line-height: 1.75;
+            line-height: 1.7;
+        }
+
+        #registration .cta-button {
+            background-color: #001f3f; /* Deep Dark Contrast for Bottom Action */
+            border-color: #001f3f;
+            color: #FFFFFF;
+        }
+
+        #registration .cta-button:hover {
+            background-color: #D4AF37;
+            border-color: #D4AF37;
+            color: #FFFFFF;
         }
 
         /* ==========================================
-           7. FOOTER STYLING
+           8. FOOTER STYLING
            ========================================== */
         footer {
             text-align: center;
@@ -276,7 +277,7 @@
         }
 
         /* ==========================================
-           8. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
+           9. RESPONSIVE BREAKPOINTS
            ========================================== */
         @media (max-width: 768px) {
             header {
@@ -287,7 +288,6 @@
                 flex-direction: column;
                 gap: 16px;
                 padding: 15px 20px;
-                align-items: center;
             }
             
             nav a {
@@ -296,23 +296,19 @@
             }
 
             #hero {
-                padding: 90px 20px;
+                padding: 80px 20px;
             }
 
             #hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             #hero p {
                 font-size: 1.1rem;
             }
 
-            #philosophy, #pathways, #registration {
+            #philosophy, #endorsement, #pathways, #registration {
                 padding: 60px 20px;
-            }
-
-            #philosophy p.intro-text {
-                margin-bottom: 32px;
             }
 
             .quote-text {
@@ -336,9 +332,7 @@
     <!-- Header & Navigation -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">
-                <img src="logo.png" alt="W-Elite Pro Logo" style="height: 40px; width: auto; display: block;">
-            </a>
+            <a href="#" class="logo">W-ELITE PRO</a>
             <nav>
                 <a href="#hero">Home</a>
                 <a href="#philosophy">Philosophy</a>
@@ -348,20 +342,21 @@
         </div>
     </header>
 
-    <!-- Hero Section with Navy Background Block -->
+    <!-- Hero Section -->
     <section id="hero">
         <h1>For Algerian English learners, university teachers, IELTS takers and professionals in different industries.</h1>
         <p>High-tier linguistic competence tailored for scholars, postgraduates, and corporate leaders aiming for global impact and publication-ready precision.</p>
         <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Apply for Admission</a>
     </section>
 
-    <!-- Philosophy & Recommendation Section -->
+    <!-- Philosophy Section -->
     <section id="philosophy">
-        <p class="intro-text">
-            W-Elite Pro was founded to bridge the gap between general English language proficiency and the rigorous demands of today's international academic and professional environments. Driven by PhD-led expertise, our programs transition learners away from textbook rules to fluent, real-world English communication. This specialized training empowers ambitious candidates to assert their voice confidently on a global stage.
-        </p>
-        
-        <h2>Academic Recommendation:</h2>
+        <h2>The Academic Standard</h2>
+        <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
+    </section>
+
+    <!-- Academic Recommendation Section -->
+    <section id="endorsement">
         <div class="testimonial-container">
             <p class="quote-text">
                 "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
@@ -372,33 +367,31 @@
 
     <!-- Pathways Section -->
     <section id="pathways">
-        <div class="pathways-container">
-            <h2>Elite Training Pathways</h2>
-            <div class="grid-container">
-                
-                <!-- Pathway 1 -->
-                <div class="card">
-                    <h3>W-Core</h3>
-                    <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
-                </div>
-
-                <!-- Pathway 2 -->
-                <div class="card">
-                    <h3>W-Ultra (IELTS Preparation)</h3>
-                    <p>Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
-                </div>
-
-                <!-- Pathway 3 -->
-                <div class="card">
-                    <h3>W-PACE</h3>
-                    <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
-                </div>
-
+        <h2>Elite Training Pathways</h2>
+        <div class="grid-container">
+            
+            <!-- Pathway 1 -->
+            <div class="card">
+                <h3>W-Core</h3>
+                <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
             </div>
+
+            <!-- Pathway 2 -->
+            <div class="card">
+                <h3>W-Ultra (IELTS Preparation)</h3>
+                <p>Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
+            </div>
+
+            <!-- Pathway 3 -->
+            <div class="card">
+                <h3>W-PACE</h3>
+                <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
+            </div>
+
         </div>
     </section>
 
-    <!-- Application / CTA Section (Premium Grey Block) -->
+    <!-- Application / CTA Section -->
     <section id="registration">
         <h2>Begin Your Pathway</h2>
         <p>Admission to W-Elite Pro cohorts is highly selective to ensure peer-to-peer excellence. Submit your professional details to initiate your application sequence.</p>
