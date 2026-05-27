@@ -1,111 +1,285 @@
-/* Global Resets */
+/* ==========================================
+   1. GLOBAL STYLES & TYPOGRAPHY
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-html {
-    scroll-behavior: smooth; /* Gives that sleek, smooth sliding effect when clicking menu items */
-    font-family: 'Helvetica Neue', Arial, sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Navigation Bar */
-.navbar {
+body {
+    background-color: #FFFFFF;
+    color: #333333;
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ==========================================
+   2. FIXED NAVIGATION BAR
+   ========================================== */
+header {
+    background-color: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #eaeaea;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(8px);
+}
+
+.nav-container {
+    max-width: 1100px;
+    margin: 0 auto;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 8%;
-    background-color: #ffffff;
-    border-bottom: 1px solid #eaeaea;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
+    padding: 20px;
 }
+
 .logo {
-    font-weight: bold;
-    font-size: 20px;
-    letter-spacing: 2px;
-    color: #0d233a; /* Deep, professional Navy */
-}
-.nav-links {
-    display: flex;
-    list-style: none;
-}
-.nav-links li {
-    margin-left: 20px;
-}
-.nav-links a {
+    font-size: 1.3rem;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    color: #001f3f; /* Institutional Navy */
     text-decoration: none;
-    color: #666666;
-    font-size: 14px;
-    transition: color 0.3s ease;
-}
-.nav-links a:hover {
-    color: #bfa15f; /* Elegant Gold accent */
 }
 
-/* Hero Section */
-.hero-section {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+nav a {
+    color: #555555;
+    text-decoration: none;
+    margin-left: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.5px;
+    transition: color 0.2s ease;
+}
+
+nav a:hover {
+    color: #D4AF37; /* Premium Gold Accent */
+}
+
+/* ==========================================
+   3. HERO SECTION (HIGH CONTRAST)
+   ========================================== */
+#hero {
+    padding: 120px 20px;
     text-align: center;
-    background: linear-gradient(rgba(255,255,255,0.9), rgba(255,255,255,0.9)), url('your-background-image.jpg') no-repeat center center/cover;
-    padding: 0 20px;
-}
-.hero-content h1 {
-    font-size: 48px;
-    color: #0d233a;
-    margin-bottom: 15px;
-    font-weight: 600;
-}
-.hero-content p {
-    font-size: 18px;
-    color: #666666;
-    margin-bottom: 30px;
-    max-width: 600px;
-}
-.cta-button {
-    display: inline-block;
-    padding: 12px 30px;
-    background-color: #0d233a;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-.cta-button:hover {
-    background-color: #bfa15f;
-}
-
-/* Services Grid */
-.services-section {
-    padding: 100px 8%;
     background-color: #fafafa;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#hero h1 {
+    font-size: 2.8rem;
+    color: #001f3f; /* Deep Navy Title */
+    max-width: 900px;
+    margin: 0 auto 24px auto;
+    line-height: 1.25;
+    letter-spacing: -0.5px;
+    font-weight: 700;
+}
+
+#hero p {
+    font-size: 1.2rem;
+    color: #444444;
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    line-height: 1.7;
+}
+
+/* Premium Button Styling */
+.cta-button {
+    background-color: #001f3f; /* Solid Navy */
+    color: #FFFFFF;
+    padding: 14px 32px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    letter-spacing: 0.5px;
+    border-radius: 4px;
+    display: inline-block;
+    transition: background-color 0.2s ease, border-color 0.2s ease;
+    border: 1px solid #001f3f;
+}
+
+.cta-button:hover {
+    background-color: #ffffff;
+    color: #001f3f;
+    border-color: #001f3f;
+}
+
+/* ==========================================
+   4. PHILOSOPHY SECTION (MINIMALIST PROSE)
+   ========================================== */
+#philosophy {
+    padding: 100px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+#philosophy h2 {
+    font-size: 1.8rem;
+    color: #001f3f; /* Deep Navy */
+    margin-bottom: 24px;
+    font-weight: 700;
+    letter-spacing: -0.3px;
+}
+
+#philosophy p {
+    font-size: 1.15rem;
+    color: #444444;
+    line-height: 1.85;
+}
+
+/* ==========================================
+   5. PATHWAYS GRID SECTION
+   ========================================== */
+#pathways {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+#pathways h2 {
+    font-size: 1.8rem;
+    color: #001f3f; /* Deep Navy */
+    margin-bottom: 48px;
     text-align: center;
+    font-weight: 700;
 }
-.services-section h2 {
-    margin-bottom: 50px;
-    color: #0d233a;
-}
+
 .grid-container {
     display: flex;
-    justify-content: center;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
 }
+
 .card {
-    background: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    width: 350px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.02);
-    border: 1px solid #eeeeee;
-    transition: transform 0.3s ease;
+    flex: 1;
+    min-width: 300px;
+    max-width: 340px;
+    border: 1px solid #eaeaea;
+    background-color: #FFFFFF;
+    padding: 35px 30px;
+    border-radius: 4px;
+    border-top: 3px solid #001f3f; /* Navy Header Border for Cards */
+    transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
 }
+
+/* Subtle elevation and gold shift on focus */
 .card:hover {
-    transform: translateY(-5px); /* Elegant lifting effect on hover */
+    border-top-color: #D4AF37; /* Shifts from Navy to Gold on hover */
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    color: #001f3f; /* Deep Navy */
+    margin-bottom: 16px;
+    font-weight: 600;
+    letter-spacing: -0.2px;
+}
+
+.card p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.65;
+}
+
+/* ==========================================
+   6. REGISTRATION / ADMISSION SECTION
+   ========================================== */
+#registration {
+    padding: 110px 20px;
+    text-align: center;
+    background-color: #fafafa;
+    border-top: 1px solid #eaeaea;
+    border-bottom: 1px solid #eaeaea;
+}
+
+#registration h2 {
+    font-size: 1.8rem;
+    color: #001f3f; /* Deep Navy */
+    margin-bottom: 16px;
+    font-weight: 700;
+}
+
+#registration p {
+    font-size: 1.15rem;
+    color: #444444;
+    max-width: 600px;
+    margin: 0 auto 40px auto;
+    line-height: 1.7;
+}
+
+/* Secondary Gold Accent Button Variant for the Footer CTA */
+#registration .cta-button {
+    background-color: #D4AF37; /* Premium Gold */
+    border-color: #D4AF37;
+    color: #ffffff;
+}
+
+#registration .cta-button:hover {
+    background-color: #001f3f; /* Inverts to Navy on Hover */
+    border-color: #001f3f;
+    color: #ffffff;
+}
+
+/* ==========================================
+   7. FOOTER STYLING
+   ========================================== */
+footer {
+    text-align: center;
+    padding: 50px 20px;
+    color: #888888;
+    font-size: 0.85rem;
+    background-color: #FFFFFF;
+    letter-spacing: 0.3px;
+}
+
+/* ==========================================
+   8. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
+   ========================================== */
+@media (max-width: 768px) {
+    header {
+        position: relative;
+    }
+    
+    .nav-container {
+        flex-direction: column;
+        gap: 16px;
+        padding: 15px 20px;
+    }
+    
+    nav a {
+        margin: 0 12px;
+        font-size: 0.85rem;
+    }
+
+    #hero {
+        padding: 70px 20px;
+    }
+
+    #hero h1 {
+        font-size: 2rem;
+    }
+
+    #hero p {
+        font-size: 1.1rem;
+    }
+
+    #philosophy, #pathways, #registration {
+        padding: 60px 20px;
+    }
+
+    .grid-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        max-width: 100%;
+        min-width: 100%;
+    }
 }
