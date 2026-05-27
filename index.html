@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>W-Elite Pro | Institutional Portal</title>
+    <title>W-Elite Pro</title>
     
     <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,16 +12,16 @@
     
     <style>
         /* ==========================================
-           1. CORE BRANDING VARIABLES & RESET
+           1. CORE VARIABLES & RESET
            ========================================== */
         :root {
-            --brand-navy: #001f3f;      /* Absolute signature Navy Blue */
-            --brand-gold: #D4AF37;      /* Distinct premium metallic Gold */
-            --bg-pure-white: #ffffff;   /* Stark white canvas */
+            --brand-navy: #001f3f;      
+            --brand-gold: #D4AF37;      
+            --bg-pure-white: #ffffff;   
             --text-dark: #001f3f;       
             --text-muted: #5a6578;      
-            --border-line: rgba(0, 31, 63, 0.08);
-            --bezier-smooth: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+            --border-line: rgba(0, 31, 63, 0.12);
+            --bezier-smooth: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * {
@@ -39,7 +39,7 @@
             background-color: var(--bg-pure-white);
             color: var(--text-dark);
             font-family: 'Inter', sans-serif;
-            line-height: 1.8;
+            line-height: 1.7;
             overflow-x: hidden;
         }
 
@@ -49,7 +49,7 @@
         }
 
         /* ==========================================
-           2. GLOBAL NAVIGATION (STAYING FIXED)
+           2. NAVIGATION BAR (STRICT LEFT-LEFT / RIGHT-RIGHT)
            ========================================== */
         header {
             position: fixed;
@@ -57,15 +57,8 @@
             left: 0;
             width: 100%;
             z-index: 1000;
-            transition: var(--bezier-smooth);
             background-color: var(--brand-navy);
             border-bottom: 1px solid rgba(212, 175, 55, 0.2);
-        }
-
-        header.scrolled {
-            background-color: rgba(0, 31, 63, 0.98);
-            backdrop-filter: blur(10px);
-            box-shadow: 0 10px 30px rgba(0, 31, 63, 0.05);
         }
 
         .nav-container {
@@ -79,17 +72,54 @@
 
         .logo {
             font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 4px;
             color: #ffffff;
             text-decoration: none;
         }
 
-        .nav-right {
+        .nav-center-menu {
+            display: flex;
+            gap: 40px;
+        }
+
+        .nav-center-menu a {
+            color: rgba(255, 255, 255, 0.75);
+            text-decoration: none;
+            font-size: 0.75rem;
+            font-weight: 500;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: var(--bezier-smooth);
+        }
+
+        .nav-center-menu a:hover {
+            color: var(--brand-gold);
+        }
+
+        .nav-right-cluster {
             display: flex;
             align-items: center;
-            gap: 30px;
+            gap: 35px;
+        }
+
+        .nav-apply-btn {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            color: var(--brand-navy);
+            background-color: var(--brand-gold);
+            text-decoration: none;
+            padding: 12px 24px;
+            border-radius: 2px;
+            transition: var(--bezier-smooth);
+        }
+
+        .nav-apply-btn:hover {
+            background-color: #ffffff;
+            color: var(--brand-navy);
         }
 
         .lang-switcher {
@@ -98,6 +128,8 @@
             gap: 6px;
             font-size: 0.75rem;
             letter-spacing: 1px;
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
+            padding-left: 20px;
         }
 
         .lang-btn {
@@ -107,7 +139,6 @@
             cursor: pointer;
             font-weight: 600;
             transition: var(--bezier-smooth);
-            padding: 2px 6px;
         }
 
         .lang-btn.active {
@@ -115,51 +146,43 @@
         }
 
         /* ==========================================
-           3. FIRST PAGE: FULL-BLEED DEEP NAVY VAULT
+           3. FIRST PAGE: NAVY BACKGROUND & LEFT-ALIGNED PROSE
            ========================================== */
         #first-page {
             background-color: var(--brand-navy);
             min-height: 100vh;
             display: flex;
             align-items: center;
-            justify-content: center;
-            padding: 120px 60px 80px 60px;
-            text-align: center;
+            padding: 140px 10% 80px 10%;
             color: #ffffff;
-            position: relative;
         }
 
-        .hero-monolith {
-            max-width: 1000px;
-            margin: 0 auto;
+        .hero-left-layout {
+            max-width: 950px;
+            text-align: left; /* Strict Left Alignment */
         }
 
         .typewriter-container {
             font-family: 'Playfair Display', serif;
-            font-size: 3.8rem;
+            font-size: 3.5rem;
             line-height: 1.2;
-            margin-bottom: 45px;
-            min-height: 150px; /* Prevents layout shifting */
-        }
-
-        .static-prefix {
+            margin-bottom: 50px;
+            min-height: 90px;
             color: #ffffff;
         }
 
         .typewriter-target {
-            color: var(--brand-gold);
+            color: var(--brand-gold); /* Only the changing words are gold */
             border-right: 2px solid var(--brand-gold);
-            padding-right: 6px;
+            padding-right: 8px;
             font-style: italic;
         }
 
-        /* Pure Text Descriptive Prose Block */
         .editorial-description {
-            max-width: 850px;
-            margin: 0 auto;
             display: flex;
             flex-direction: column;
-            gap: 25px;
+            gap: 30px;
+            max-width: 800px;
         }
 
         .prose-main {
@@ -176,38 +199,24 @@
             color: rgba(255, 255, 255, 0.65);
         }
 
-        /* Scroll indicator pointer */
-        .scroll-indicator {
-            position: absolute;
-            bottom: 40px;
-            left: 50%;
-            transform: translateX(-50%);
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            color: rgba(255, 255, 255, 0.3);
-            text-decoration: none;
-            transition: var(--bezier-smooth);
-        }
-        .scroll-indicator:hover {
-            color: var(--brand-gold);
-        }
-
         /* ==========================================
-           4. SECOND PAGE: PRISTINE STARK WHITE CANVAS (VISION)
+           4. SECOND PAGE: WHITE BACKGROUND & EDITORIAL VISION/ABOUT
            ========================================== */
         #second-page {
             background-color: var(--bg-pure-white);
-            padding: 160px 60px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
+            padding: 160px 10%;
+            border-bottom: 1px solid var(--border-line);
         }
 
-        .vision-container {
-            max-width: 900px;
-            margin: 0 auto;
-            text-align: center;
+        .editorial-left-grid {
+            display: grid;
+            grid-template-columns: 0.8fr 1.2fr;
+            gap: 80px;
+            max-width: 1200px;
+        }
+
+        .section-meta-side {
+            text-align: left;
         }
 
         .section-label {
@@ -216,36 +225,36 @@
             letter-spacing: 4px;
             color: var(--brand-gold);
             font-weight: 600;
-            margin-bottom: 35px;
             display: block;
+            margin-bottom: 15px;
         }
 
-        .vision-headline {
+        .section-main-title {
             font-size: 2.8rem;
             color: var(--brand-navy);
-            margin-bottom: 40px;
-            line-height: 1.3;
+            line-height: 1.2;
+        }
+
+        .section-content-side {
+            text-align: left;
         }
 
         .vision-statement {
-            font-size: 1.25rem;
-            color: var(--text-muted);
+            font-size: 1.3rem;
+            color: var(--text-dark);
             font-weight: 300;
             line-height: 1.9;
-            margin-bottom: 70px;
+            margin-bottom: 60px;
         }
 
-        /* Academic Endorsement Sub-Block */
         .endorsement-block {
             border-top: 1px solid var(--border-line);
-            padding-top: 60px;
-            max-width: 800px;
-            margin: 0 auto;
+            padding-top: 50px;
         }
 
         .quote-text {
             font-family: 'Playfair Display', serif;
-            font-size: 1.45rem;
+            font-size: 1.4rem;
             font-style: italic;
             line-height: 1.8;
             color: var(--brand-navy);
@@ -261,229 +270,205 @@
         }
 
         /* ==========================================
-           5. THIRD PAGE: HIGH-END ARCHITECTURAL GRID
+           5. THIRD PAGE: WHITE BACKGROUND & ASYMMETRICAL CURATED GRID
            ========================================== */
         #third-page {
             background-color: var(--bg-pure-white);
-            padding: 160px 60px;
-            border-top: 1px solid var(--border-line);
+            padding: 160px 10%;
         }
 
-        .offerings-container {
-            max-width: 1400px;
+        .offerings-wrapper {
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        .offerings-header {
-            text-align: center;
-            margin-bottom: 90px;
+        .offerings-top-bar {
+            text-align: left;
+            margin-bottom: 80px;
+            border-bottom: 1px solid var(--text-dark);
+            padding-bottom: 30px;
         }
 
-        .offerings-title {
-            font-size: 3rem;
-            color: var(--brand-navy);
-            margin-top: 15px;
-        }
-
-        /* Highly Rigorous Premium Grid Layout */
-        .premium-grid {
+        /* Premium Minimalist 3-Column Structural Grid */
+        .premium-structural-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 40px;
-            margin-bottom: 80px;
+            gap: 50px;
         }
 
-        .grid-card {
-            background-color: var(--bg-pure-white);
-            border: 1px solid var(--border-line);
-            border-top: 3px solid var(--brand-navy);
-            padding: 60px 45px;
+        .pathway-column {
             display: flex;
             flex-direction: column;
-            justify-content: space-between;
-            min-height: 480px;
-            transition: var(--bezier-smooth);
+            justify-content: flex-start;
+            padding-right: 20px;
         }
 
-        .grid-card:hover {
-            transform: translateY(-8px);
-            border-top-color: var(--brand-gold);
-            box-shadow: 0 30px 60px rgba(0, 31, 63, 0.04);
+        /* Architectural structural line separating columns except the last one */
+        .pathway-column:not(:last-child) {
+            border-right: 1px solid var(--border-line);
         }
 
-        .card-upper {
-            width: 100%;
-        }
-
-        .card-meta-row {
+        .pathway-header {
             display: flex;
-            justify-content: space-between;
             align-items: baseline;
-            margin-bottom: 35px;
+            gap: 15px;
+            margin-bottom: 30px;
         }
 
-        .card-index {
+        .pathway-index {
             font-family: 'Playfair Display', serif;
             font-size: 1.8rem;
-            color: rgba(0, 31, 63, 0.15);
+            color: var(--brand-gold);
             font-style: italic;
-            transition: var(--bezier-smooth);
         }
 
-        .grid-card:hover .card-index {
-            color: var(--brand-gold);
-        }
-
-        .card-tag {
-            font-size: 0.65rem;
-            text-transform: uppercase;
-            letter-spacing: 1.5px;
-            color: var(--brand-gold);
-            font-weight: 600;
-        }
-
-        .card-title {
+        .pathway-title {
             font-size: 2.2rem;
             color: var(--brand-navy);
-            margin-bottom: 20px;
+            font-weight: 400;
         }
 
-        .card-description {
+        .pathway-tag {
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--brand-gold);
+            font-weight: 600;
+            margin-bottom: 25px;
+            display: block;
+        }
+
+        .pathway-body {
             font-size: 1.05rem;
             color: var(--text-muted);
             font-weight: 300;
-            line-height: 1.8;
-        }
-
-        /* Integrated Premium Functional CTA Anchor */
-        .apply-anchor {
-            font-family: 'Inter', sans-serif;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-            color: var(--brand-navy);
-            text-decoration: none;
-            font-weight: 600;
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            margin-top: 40px;
-            transition: var(--bezier-smooth);
-            border-bottom: 1px solid transparent;
-            padding-bottom: 4px;
-            width: fit-content;
-        }
-
-        .apply-anchor stroke {
-            transition: var(--bezier-smooth);
-        }
-
-        .grid-card:hover .apply-anchor {
-            color: var(--brand-gold);
-            border-bottom-color: var(--brand-gold);
+            line-height: 1.85;
+            text-align: left;
         }
 
         /* ==========================================
-           6. INSTITUTIONAL HIGH-CONTRAST FOOTER
+           6. INSTITUTIONAL STATIC FOOTER WITH CONTACT
            ========================================== */
         footer {
             background-color: var(--brand-navy);
             border-top: 2px solid var(--brand-gold);
-            padding: 80px 60px;
+            padding: 80px 10%;
             color: #ffffff;
         }
 
         .footer-container {
-            max-width: 1400px;
+            max-width: 1300px;
             margin: 0 auto;
             display: flex;
-            flex-direction: column;
+            justify-content: space-between;
             align-items: center;
-            gap: 40px;
         }
 
-        .footer-logo {
+        .footer-left {
+            text-align: left;
+        }
+
+        .footer-brand {
             font-weight: 600;
-            letter-spacing: 4px;
-            color: #ffffff;
-            text-decoration: none;
-            font-size: 0.95rem;
-        }
-
-        /* Strict Institutional Signature Contact Element */
-        .footer-contact-link {
-            font-family: 'Inter', sans-serif;
-            font-size: 1.4rem;
-            font-weight: 300;
-            color: var(--brand-gold);
-            text-decoration: none;
-            letter-spacing: 1px;
-            transition: var(--bezier-smooth);
-            border-bottom: 1px solid transparent;
-            padding-bottom: 4px;
-        }
-
-        .footer-contact-link:hover {
-            color: #ffffff;
-            border-bottom-color: #ffffff;
+            letter-spacing: 3px;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
         }
 
         .footer-copyright {
             font-size: 0.75rem;
             color: rgba(255, 255, 255, 0.4);
+        }
+
+        .footer-right {
+            text-align: right;
+        }
+
+        .footer-contact-email {
+            font-family: 'Inter', sans-serif;
+            font-size: 1.3rem;
+            font-weight: 300;
+            color: var(--brand-gold);
+            text-decoration: none;
             letter-spacing: 0.5px;
-            margin-top: 20px;
+            transition: var(--bezier-smooth);
+            border-bottom: 1px solid transparent;
+            padding-bottom: 4px;
+        }
+
+        .footer-contact-email:hover {
+            color: #ffffff;
+            border-bottom-color: #ffffff;
         }
 
         /* ==========================================
-           7. SYSTEM RESPONSIVE REFINEMENT
+           7. SYSTEM RESPONSIVE COHESION
            ========================================== */
-        @media (max-width: 1200px) {
-            .premium-grid {
+        @media (max-width: 1100px) {
+            .editorial-left-grid {
                 grid-template-columns: 1fr;
-                gap: 30px;
+                gap: 40px;
             }
-            .grid-card {
-                min-height: auto;
-                padding: 50px 40px;
+            .premium-structural-grid {
+                grid-template-columns: 1fr;
+                gap: 60px;
+            }
+            .pathway-column:not(:last-child) {
+                border-right: none;
+                border-bottom: 1px solid var(--border-line);
+                padding-bottom: 40px;
+            }
+            .nav-center-menu {
+                display: none; /* Mobile optimization handles collapse */
             }
         }
 
-        @media (max-width: 900px) {
-            .nav-container { padding: 20px 30px; }
-            #first-page { padding: 140px 30px 80px 30px; }
-            .typewriter-container { font-size: 2.4rem; min-height: 110px; }
+        @media (max-width: 768px) {
+            .nav-container { padding: 25px 30px; }
+            #first-page { padding: 140px 30px 60px 30px; }
+            .typewriter-container { font-size: 2.3rem; min-height: 120px; }
             .prose-main { font-size: 1.15rem; }
             #second-page, #third-page { padding: 100px 30px; }
-            .vision-headline { font-size: 2rem; }
-            .offerings-title { font-size: 2.2rem; }
-            footer { padding: 60px 30px; }
-            .footer-contact-link { font-size: 1.1rem; }
+            .section-main-title { font-size: 2.2rem; }
+            .pathway-title { font-size: 1.8rem; }
+            .footer-container { flex-direction: column; align-items: flex-start; gap: 30px; }
+            .footer-right { text-align: left; }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation Layer -->
-    <header id="main-header">
+    <!-- Upper Institutional Menu Layer -->
+    <header>
         <div class="nav-container">
             <a href="#" class="logo">W-ELITE PRO</a>
-            <div class="nav-right">
-                <!-- Dual-Language Command Node -->
+            
+            <!-- Ordered Menu Links Matrix -->
+            <nav class="nav-center-menu">
+                <a href="#second-page" class="lang-node" data-en="About" data-fr="À Propos">About</a>
+                <a href="#second-page" class="lang-node" data-en="Vision" data-fr="Vision">Vision</a>
+                <a href="#third-page" class="lang-node" data-en="Pathways" data-fr="Parcours">Pathways</a>
+                <a href="#second-page" class="lang-node" data-en="Success Stories" data-fr="Témoignages">Success Stories</a>
+            </nav>
+
+            <div class="nav-right-cluster">
+                <!-- Single Absolute Destination Anchor Point -->
+                <a href="https://w-elitepro.com/apply/" class="nav-apply-btn lang-node" data-en="Apply" data-fr="Postuler">Apply</a>
+                
                 <div class="lang-switcher">
-                    <button class="lang-btn active" onclick="switchSystemLanguage('en')">EN</button>
-                    <span style="color:rgba(255,255,255,0.2)">|</span>
-                    <button class="lang-btn" onclick="switchSystemLanguage('fr')">FR</button>
+                    <button class="lang-btn active" onclick="triggerSystemLocalization('en')">EN</button>
+                    <span style="color:rgba(255,255,255,0.25)">|</span>
+                    <button class="lang-btn" onclick="triggerSystemLocalization('fr')">FR</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- FIRST PAGE: Deep Navy Vault containing Continuous Typewriter & Structural Prose -->
+    <!-- FIRST PAGE: Deep Navy Canvas & Strict Left-Aligned Typography Array -->
     <section id="first-page">
-        <div class="hero-monolith">
+        <div class="hero-left-layout">
             <div class="typewriter-container">
-                <span class="static-prefix">W-Elite | </span><span id="typewriter" class="typewriter-target"></span>
+                <span>W-Elite | English for </span><span id="typewriter" class="typewriter-target"></span>
             </div>
             
             <div class="editorial-description">
@@ -499,213 +484,188 @@
                 </p>
             </div>
         </div>
-        <a href="#second-page" class="scroll-indicator lang-node" data-en="Scroll to exploration" data-fr="Défiler pour explorer">Scroll to exploration</a>
     </section>
 
-    <!-- SECOND PAGE: Stark White Canvas for Vision & Endorsement Architecture -->
+    <!-- SECOND PAGE: Pristine White Canvas for Identity & Academic Validation -->
     <section id="second-page">
-        <div class="vision-container">
-            <span class="section-label lang-node" data-en="Institutional Paradigm" data-fr="Paradigme Institutionnel">Institutional Paradigm</span>
-            <h2 class="vision-headline lang-node" data-en="Our Vision" data-fr="Notre Vision">Our Vision</h2>
+        <div class="editorial-left-grid">
+            <div class="section-meta-side">
+                <span class="section-label lang-node" data-en="Institutional Profile" data-fr="Profil Institutionnel">Institutional Profile</span>
+                <h2 class="section-main-title lang-node" data-en="Our Vision" data-fr="Notre Vision">Our Vision</h2>
+            </div>
             
-            <p class="vision-statement lang-node"
-               data-en="Language mastery should be achievable, transparent, and empowering. W-Elite Pro bridges the gap between raw potential and global command through unyielding, systematic execution. We reject temporary fixes, focusing instead on sustainable rhetorical authority."
-               data-fr="La maîtrise d'une langue doit être accessible, transparente et valorisante. W-Elite Pro comble le fossé entre le potentiel brut et la maîtrise globale grâce à une exécution rigoureuse et systématique. Nous rejetons les solutions temporaires pour nous concentrer sur une autorité rhétorique durable.">
-                Language mastery should be achievable, transparent, and empowering. W-Elite Pro bridges the gap between raw potential and global command through unyielding, systematic execution. We reject temporary fixes, focusing instead on sustainable rhetorical authority.
-            </p>
-
-            <div class="endorsement-block">
-                <p class="quote-text lang-node"
-                   data-en='"Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."'
-                   data-fr='"Que vous cherchiez à maîtriser les compétences de communication professionnelle ou à acquérir une aisance académique, l’approche systématique et le style d’enseignement efficace de W-Elite Pro vous guideront vers vos objectifs."'>
-                    "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
+            <div class="section-content-side">
+                <p class="vision-statement lang-node"
+                   data-en="Language mastery should be achievable, transparent, and empowering. W-Elite Pro bridges the gap between raw potential and global command through unyielding, systematic execution. We reject temporary adjustments, focusing exclusively on establishing permanent rhetorical authority."
+                   data-fr="La maîtrise d'une langue doit être accessible, transparente et valorisante. W-Elite Pro comble le fossé entre le potentiel brut et la maîtrise globale grâce à une exécution rigoureuse et systématique. Nous rejetons les ajustements temporaires pour nous concentrer exclusivement sur l'établissement d'une autorité rhétorique durable.">
+                    Language mastery should be achievable, transparent, and empowering. W-Elite Pro bridges the gap between raw potential and global command through unyielding, systematic execution. We reject temporary adjustments, focusing exclusively on establishing permanent rhetorical authority.
                 </p>
-                <p class="quote-author">— Prof. F. Benyelles Bedjaoui</p>
+
+                <div class="endorsement-block">
+                    <p class="quote-text lang-node"
+                       data-en='"Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."'
+                       data-fr='"Que vous cherchiez à maîtriser les compétences de communication professionnelle ou à acquérir une aisance académique, l’approche systématique et le style d’enseignement efficace de W-Elite Pro vous guideront vers vos objectifs."'>
+                        "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
+                    </p>
+                    <p class="quote-author">— Prof. F. Benyelles Bedjaoui</p>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- THIRD PAGE: Premium Architecture Grid for the Three Pathways -->
+    <!-- THIRD PAGE: Pristine White Canvas & Clean Editorial 3-Column Grid Layout -->
     <section id="third-page">
-        <div class="offerings-container">
-            <div class="offerings-header">
-                <span class="section-label lang-node" data-en="Structural Curricula" data-fr="Cursus Structurels">Structural Curricula</span>
-                <h2 class="offerings-title lang-node" data-en="Our Offerings" data-fr="Nos Programmes">Our Offerings</h2>
+        <div class="offerings-wrapper">
+            <div class="offerings-top-bar">
+                <span class="section-label lang-node" data-en="Curated Frameworks" data-fr="Programmes Spécifiques">Curated Frameworks</span>
+                <h2 class="section-main-title lang-node" data-en="Architectural Pathways" data-fr="Parcours Académiques">Architectural Pathways</h2>
             </div>
 
-            <div class="premium-grid">
-                <!-- Framework I: W-Core -->
-                <div class="grid-card">
-                    <div class="card-upper">
-                        <div class="card-meta-row">
-                            <span class="card-index">I</span>
-                            <span class="card-tag lang-node" data-en="General & Fluency" data-fr="Général & Fluidité">General & Fluency</span>
-                        </div>
-                        <h3 class="card-title">W-Core</h3>
-                        <p class="card-description lang-node"
-                           data-en="Built for individuals demanding complete linguistic autonomy. This framework systematically strips away hesitation, solidifying high-level conversational structures, narrative confidence, and seamless communication for global mobility."
-                           data-fr="Conçu pour les personnes exigeant une autonomie linguistique complète. Ce cadre élimine systématiquement l'hésitation, solidifiant les structures de conversation de haut niveau, la confiance narrative et une communication fluide pour la mobilité internationale.">
-                            Built for individuals demanding complete linguistic autonomy. This framework systematically strips away hesitation, solidifying high-level conversational structures, narrative confidence, and seamless communication for global mobility.
-                        </p>
+            <div class="premium-structural-grid">
+                <!-- Column Pathway Component I -->
+                <div class="pathway-column">
+                    <div class="pathway-header">
+                        <span class="pathway-index">I</span>
+                        <h3 class="pathway-title">W-Core</h3>
                     </div>
-                    <a href="mailto:contact@w-elitepro.com?subject=Application for W-Core" class="apply-anchor">
-                        <span class="lang-node" data-en="Apply Here" data-fr="Postuler Ici">Apply Here</span>
-                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6H13M13 6L8.5 1.5M13 6L8.5 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
+                    <span class="pathway-tag lang-node" data-en="General & Fluency" data-fr="Général & Fluidité">General & Fluency</span>
+                    <p class="pathway-body lang-node"
+                       data-en="Built for individuals demanding complete linguistic autonomy. This framework systematically strips away hesitation, solidifying high-level conversational structures, narrative confidence, and seamless communication for global mobility."
+                       data-fr="Conçu pour les personnes exigeant une autonomie linguistique complète. Ce cadre élimine systématiquement l'hésitation, solidifiant les structures de conversation de haut niveau, la confiance narrative et une communication fluide pour la mobilité internationale.">
+                        Built for individuals demanding complete linguistic autonomy. This framework systematically strips away hesitation, solidifying high-level conversational structures, narrative confidence, and seamless communication for global mobility.
+                    </p>
                 </div>
 
-                <!-- Framework II: W-Ultra -->
-                <div class="grid-card">
-                    <div class="card-upper">
-                        <div class="card-meta-row">
-                            <span class="card-index">II</span>
-                            <span class="card-tag lang-node" data-en="IELTS Performance" data-fr="Performance IELTS">Performance IELTS</span>
-                        </div>
-                        <h3 class="card-title">W-Ultra</h3>
-                        <p class="card-description lang-node"
-                           data-en="A highly targeted, rigorous diagnostic framework designed for elite tier candidates. This path delivers strict, step-by-step test strategy execution to target high-band scores (7+) required for international university admissions and scholarship pathways."
-                           data-fr="Un cadre de diagnostic rigoureux et hautement ciblé, conçu pour les candidats d'élite. Ce parcours applique une stratégie d'examen stricte et progressive pour atteindre les scores les plus élevés (Band 7+) requis pour les admissions universitaires internationales et les bourses d'études.">
-                            A highly targeted, rigorous diagnostic framework designed for elite tier candidates. This path delivers strict, step-by-step test strategy execution to target high-band scores (7+) required for international university admissions and scholarship pathways.
-                        </p>
+                <!-- Column Pathway Component II -->
+                <div class="pathway-column">
+                    <div class="pathway-header">
+                        <span class="pathway-index">II</span>
+                        <h3 class="pathway-title">W-Ultra</h3>
                     </div>
-                    <a href="mailto:contact@w-elitepro.com?subject=Application for W-Ultra" class="apply-anchor">
-                        <span class="lang-node" data-en="Apply Here" data-fr="Postuler Ici">Apply Here</span>
-                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6H13M13 6L8.5 1.5M13 6L8.5 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
+                    <span class="pathway-tag lang-node" data-en="IELTS Mastery (Band 7+)" data-fr="Maîtrise IELTS (Band 7+)">IELTS Mastery (Band 7+)</span>
+                    <p class="pathway-body lang-node"
+                       data-en="A highly targeted, rigorous diagnostic framework designed for elite tier candidates. This path delivers strict, step-by-step test strategy execution to target high-band scores required for international university admissions and scholarship pathways."
+                       data-fr="Un cadre de diagnostic rigoureux et hautement ciblé, conçu pour les candidats d'élite. Ce parcours applique une stratégie d'examen stricte et progressive pour atteindre les scores les plus élevés requis pour les admissions universitaires internationales et les bourses d'études.">
+                        A highly targeted, rigorous diagnostic framework designed for elite tier candidates. This path delivers strict, step-by-step test strategy execution to target high-band scores required for international university admissions and scholarship pathways.
+                    </p>
                 </div>
 
-                <!-- Framework III: W-PACE -->
-                <div class="grid-card">
-                    <div class="card-upper">
-                        <div class="card-meta-row">
-                            <span class="card-index">III</span>
-                            <span class="card-tag lang-node" data-en="Executive & Academic" data-fr="Exécutif & Académique">Executive & Academic</span>
-                        </div>
-                        <h3 class="card-title">W-PACE</h3>
-                        <p class="card-description lang-node"
-                           data-en="An executive communication incubator designed specifically for educators, scholars, and business professionals. It focuses entirely on rhetorical authority, advanced presentation defense, clear academic authorship, and high-stakes workplace leadership."
-                           data-fr="Un incubateur de communication executive conçu spécifiquement pour les enseignants, chercheurs et professionnels. Il se concentre entièrement sur l'autorité rhétorique, la soutenance de présentations avancées, la rédaction académique claire et le leadership professionnel à enjeux élevés.">
-                            An executive communication incubator designed specifically for educators, scholars, and business professionals. It focuses entirely on rhetorical authority, advanced presentation defense, clear academic authorship, and high-stakes workplace leadership.
-                        </p>
+                <!-- Column Pathway Component III -->
+                <div class="pathway-column">
+                    <div class="pathway-header">
+                        <span class="pathway-index">III</span>
+                        <h3 class="pathway-title">W-PACE</h3>
                     </div>
-                    <a href="mailto:contact@w-elitepro.com?subject=Application for W-PACE" class="apply-anchor">
-                        <span class="lang-node" data-en="Apply Here" data-fr="Postuler Ici">Apply Here</span>
-                        <svg width="14" height="12" viewBox="0 0 14 12" fill="none"><path d="M1 6H13M13 6L8.5 1.5M13 6L8.5 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </a>
+                    <span class="pathway-tag lang-node" data-en="Executive & Academic" data-fr="Exécutif & Académique">Executive & Academic</span>
+                    <p class="pathway-body lang-node"
+                       data-en="An executive communication incubator designed specifically for educators, scholars, and business professionals. It focuses entirely on rhetorical authority, advanced presentation defense, clear academic authorship, and high-stakes workplace leadership."
+                       data-fr="Un incubateur de communication executive conçu spécifiquement pour les enseignants, chercheurs et professionnels. Il se concentre entièrement sur l'autorité rhétorique, la soutenance de présentations avancées, la rédaction académique claire et le leadership professionnel à enjeux élevés.">
+                        An executive communication incubator designed specifically for educators, scholars, and business professionals. It focuses entirely on rhetorical authority, advanced presentation defense, clear academic authorship, and high-stakes workplace leadership.
+                    </p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER: Institutional Signature Anchor -->
+    <!-- FOOTER: Institutional Contact Terminal Base -->
     <footer>
         <div class="footer-container">
-            <a href="#" class="footer-logo">W-ELITE PRO</a>
+            <div class="footer-left">
+                <div class="footer-brand">W-ELITE PRO</div>
+                <p class="footer-copyright">&copy; 2026 W-Elite Pro Institute. All institutional rights reserved.</p>
+            </div>
             
-            <!-- Strict Institutional Contact Mandate -->
-            <a href="mailto:contact@w-elitepro.com" class="footer-contact-link">contact@w-elitepro.com</a>
-            
-            <p class="footer-copyright">&copy; 2026 W-Elite Pro. All rights reserved.</p>
+            <div class="footer-right">
+                <a href="mailto:contact@w-elitepro.com" class="footer-contact-email">contact@w-elitepro.com</a>
+            </div>
         </div>
     </footer>
 
     <!-- ==========================================
-       8. JAVASCRIPT ENGINE (TYPEWRITER & TRANSLATION)
-       ========================================== */ -->
+       8. ENGINE EXECUTION LOGIC (STRICTLY TARGETED WORDS)
+       ========================================== -->
     <script>
-        // Header Transparency Logic on scroll
-        window.addEventListener('scroll', () => {
-            const header = document.getElementById('main-header');
-            if (window.scrollY > 50) {
-                header.classList.add('scrolled');
-            } else {
-                header.classList.remove('scrolled');
-            }
-        });
-
-        // Lexical Taxonomy Matrix for Typewriter Engine
-        const vocabularyMatrix = {
+        // Array matrices targeting only mutable elements for the text line
+        const dynamicWordMatrix = {
             en: [
-                "English for university teachers.",
-                "English for professionals.",
-                "English for IELTS takers.",
-                "English for English learners."
+                "university teachers.",
+                "professionals.",
+                "IELTS takers.",
+                "English learners."
             ],
             fr: [
-                "L'anglais pour les enseignants universitaires.",
-                "L'anglais pour les professionnels.",
-                "L'anglais pour les candidats à l'IELTS.",
-                "L'anglais pour les apprenants."
+                "enseignants universitaires.",
+                "professionnels.",
+                "candidats à l'IELTS.",
+                "apprenants."
             ]
         };
 
-        let currentMatrixIndex = 0;
-        let currentCharIndex = 0;
-        let targetIsDeleting = false;
-        let typewriterReference;
+        let currentMatrixPointer = 0;
+        let characterIndexCounter = 0;
+        let isStringDeleting = false;
+        let typewriterTaskTimer;
 
-        function executionTypeEngine() {
-            const currentActiveLangBtn = document.querySelector('.lang-btn.active');
-            const selectedLanguage = currentActiveLangBtn ? currentActiveLangBtn.innerText.toLowerCase() : 'en';
-            const taxonomyList = vocabularyMatrix[selectedLanguage];
+        function runTypewriterSystem() {
+            const currentActiveLanguageNode = document.querySelector('.lang-btn.active');
+            const workingLanguageCode = currentActiveLanguageNode ? currentActiveLanguageNode.innerText.toLowerCase() : 'en';
+            const dynamicTermsList = dynamicWordMatrix[workingLanguageCode];
             
-            if (currentMatrixIndex >= taxonomyList.length) currentMatrixIndex = 0;
-            const absoluteCurrentWord = taxonomyList[currentMatrixIndex];
+            if (currentMatrixPointer >= dynamicTermsList.length) currentMatrixPointer = 0;
+            const targetActiveString = dynamicTermsList[currentMatrixPointer];
 
-            const interactiveTarget = document.getElementById("typewriter");
-            if (!interactiveTarget) return;
+            const typewriterTargetSpan = document.getElementById("typewriter");
+            if (!typewriterTargetSpan) return;
 
-            if (targetIsDeleting) {
-                currentCharIndex--;
+            if (isStringDeleting) {
+                characterIndexCounter--;
             } else {
-                currentCharIndex++;
+                characterIndexCounter++;
             }
 
-            interactiveTarget.innerHTML = absoluteCurrentWord.substring(0, currentCharIndex);
-            let deliberateSpeed = targetIsDeleting ? 30 : 65;
+            typewriterTargetSpan.innerHTML = targetActiveString.substring(0, characterIndexCounter);
+            let operationalInterval = isStringDeleting ? 35 : 75;
 
-            if (!targetIsDeleting && currentCharIndex === absoluteCurrentWord.length) {
-                deliberateSpeed = 2500; // Prolong visual duration on full string array
-                targetIsDeleting = true;
-            } else if (targetIsDeleting && currentCharIndex === 0) {
-                targetIsDeleting = false;
-                currentMatrixIndex = (currentMatrixIndex + 1) % taxonomyList.length;
-                deliberateSpeed = 400; 
+            if (!isStringDeleting && characterIndexCounter === targetActiveString.length) {
+                operationalInterval = 2300; // Delay duration for fully typed out gold target string
+                isStringDeleting = true;
+            } else if (isStringDeleting && characterIndexCounter === 0) {
+                isStringDeleting = false;
+                currentMatrixPointer = (currentMatrixPointer + 1) % dynamicTermsList.length;
+                operationalInterval = 400; 
             }
 
-            typewriterReference = setTimeout(executionTypeEngine, deliberateSpeed);
+            typewriterTaskTimer = setTimeout(runTypewriterSystem, operationalInterval);
         }
 
-        function interruptAndResetTypewriter() {
-            clearTimeout(typewriterReference);
-            currentCharIndex = 0;
-            targetIsDeleting = false;
-            executionTypeEngine();
+        function forceTypewriterReset() {
+            clearTimeout(typewriterTaskTimer);
+            characterIndexCounter = 0;
+            isStringDeleting = false;
+            runTypewriterSystem();
         }
 
-        function switchSystemLanguage(targetLang) {
-            // Dynamic text deployment
-            const localizedElements = document.querySelectorAll('.lang-node');
-            localizedElements.forEach(node => {
-                const translationString = node.getAttribute(`data-${targetLang}`);
-                if (translationString) node.innerHTML = translationString;
+        function triggerSystemLocalization(chosenLanguage) {
+            // Deploy translations for targeted nodes
+            const translatableNodes = document.querySelectorAll('.lang-node');
+            translatableNodes.forEach(node => {
+                const mapValueString = node.getAttribute(`data-${chosenLanguage}`);
+                if (mapValueString) node.innerHTML = mapValueString;
             });
 
-            // UI Node State adjustment
-            const operationalButtons = document.querySelectorAll('.lang-btn');
-            operationalButtons.forEach(btn => btn.classList.remove('active'));
+            // Re-map interface state for buttons
+            const localControlButtons = document.querySelectorAll('.lang-btn');
+            localControlButtons.forEach(btn => btn.classList.remove('active'));
             
-            const eventTrigger = window.event;
-            const currentTargetButton = eventTrigger ? eventTrigger.target : document.querySelector(`.lang-btn[onclick*="${targetLang}"]`);
-            if (currentTargetButton) currentTargetButton.classList.add('active');
+            const nativeEventObj = window.event;
+            const finalTargetElement = nativeEventObj ? nativeEventObj.target : document.querySelector(`.lang-btn[onclick*="${chosenLanguage}"]`);
+            if (finalTargetElement) finalTargetElement.classList.add('active');
 
-            // Reset typewriter sequence using specific array values
-            interruptAndResetTypewriter();
+            forceTypewriterReset();
         }
 
-        // Initialize execution on load
         document.addEventListener("DOMContentLoaded", () => {
-            setTimeout(executionTypeEngine, 400);
+            setTimeout(runTypewriterSystem, 300);
         });
     </script>
 </body>
