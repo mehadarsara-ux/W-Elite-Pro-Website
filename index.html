@@ -6,7 +6,7 @@
     <title>W-Elite Pro</title>
     <style>
         /* ==========================================
-           1. GLOBAL PREMIUM RESET & TYPOGRAPHY
+           1. PREMIUM MINIMALIST RESET & TYPOGRAPHY
            ========================================== */
         * {
             margin: 0;
@@ -17,20 +17,20 @@
         }
 
         body {
-            background-color: #001f3f; /* Deep Institutional Navy */
+            background-color: #001329; /* Deep, unified luxury navy background */
             color: #FFFFFF;
-            line-height: 1.8;
+            line-height: 1.75;
             overflow-x: hidden;
         }
 
         /* ==========================================
-           2. GLASSMORPHIC NAV BAR (BC-INSPIRED)
+           2. EXECUTIVE ULTRA-SLIM NAVIGATION
            ========================================== */
         header {
-            background-color: rgba(0, 31, 63, 0.9); 
-            backdrop-filter: blur(12px); /* Premium blurred scroll effect */
-            -webkit-backdrop-filter: blur(12px);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: rgba(0, 19, 41, 0.85); 
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.04);
             position: sticky;
             top: 0;
             z-index: 1000;
@@ -42,11 +42,11 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 24px 30px;
+            padding: 24px 40px;
         }
 
         .logo {
-            font-size: 1.2rem;
+            font-size: 1.15rem;
             font-weight: 800;
             letter-spacing: 3px;
             color: #FFFFFF !important;
@@ -59,9 +59,9 @@
         }
 
         nav a {
-            color: rgba(255, 255, 255, 0.7);
+            color: rgba(255, 255, 255, 0.65);
             text-decoration: none;
-            margin-left: 40px;
+            margin-left: 45px;
             font-size: 0.75rem;
             font-weight: 600;
             text-transform: uppercase; 
@@ -71,6 +71,7 @@
             transition: color 0.3s ease;
         }
 
+        /* Sleek gold micro-indicator line */
         nav a::after {
             content: '';
             position: absolute;
@@ -94,28 +95,37 @@
         }
 
         /* ==========================================
-           3. EXECUTIVE HERO LANDING SECTION
+           3. UNIFIED PAGE SECTIONS
+           ========================================== */
+        .web-section {
+            padding: 140px 40px;
+            width: 100%;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+        }
+
+        /* ==========================================
+           4. EDITORIAL HERO AREA
            ========================================== */
         #hero-container {
-            padding: 180px 30px;
+            padding: 180px 40px;
             text-align: center;
-            background: radial-gradient(circle at top, #002d5a 0%, #001f3f 70%);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: radial-gradient(circle at top, #002244 0%, #001329 80%);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.03);
         }
 
         #hero-container h1 {
-            font-size: 3rem;
+            font-size: 2.8rem;
             color: #FFFFFF; 
             max-width: 950px;
             margin: 0 auto 28px auto;
-            line-height: 1.25;
-            letter-spacing: -0.8px;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
             font-weight: 700;
         }
 
         #hero-container p {
-            font-size: 1.25rem;
-            color: rgba(255, 255, 255, 0.75);
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.7);
             max-width: 750px;
             margin: 0 auto 48px auto;
             font-weight: 300;
@@ -127,60 +137,50 @@
             padding: 16px 36px;
             text-decoration: none;
             font-weight: 600;
-            font-size: 0.9rem;
+            font-size: 0.85rem;
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            border-radius: 0px; /* Sharp editorial borders instead of round app look */
+            letter-spacing: 2px;
+            border-radius: 0px; /* Sharp, tailored edge */
             display: inline-block;
             transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
             border: 1px solid #D4AF37;
-            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
         }
 
         .cta-button:hover {
-            background-color: transparent;
-            color: #D4AF37;
-            border-color: #D4AF37;
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.25);
+            background-color: #FFFFFF;
+            color: #001329;
+            border-color: #FFFFFF;
+            transform: translateY(-3px);
         }
 
         /* ==========================================
-           4. PHILOSOPHY SECTION (EDITORIAL EDIT)
+           5. PHILOSOPHY SECTION (DARK MASTER LAYER)
            ========================================== */
-        #philosophy-section {
-            background-color: #FAFAFA; /* Soft luxury gray/white */
-            color: #111111;
-            padding: 140px 30px;
-        }
-
         #philosophy {
             max-width: 900px;
             margin: 0 auto;
         }
 
         .philosophy-content h2 {
-            font-size: 2.4rem;
-            color: #001f3f; 
+            font-size: 2.2rem;
+            color: #FFFFFF; 
             margin-bottom: 30px;
             font-weight: 700;
             letter-spacing: -0.5px;
-            position: relative;
         }
 
         .philosophy-content p {
-            font-size: 1.2rem;
-            color: #444444;
-            line-height: 1.9;
+            font-size: 1.15rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.85;
             margin-bottom: 60px;
-            font-weight: 400;
         }
 
         .testimonial-container {
             border-left: 2px solid #D4AF37; 
             padding: 40px;
-            background-color: #FFFFFF;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.02);
+            background-color: rgba(255, 255, 255, 0.02);
+            border-radius: 0 4px 4px 0;
         }
 
         .quote-title {
@@ -195,34 +195,29 @@
         .quote-text {
             font-size: 1.15rem;
             font-style: italic;
-            color: #222222;
+            color: rgba(255, 255, 255, 0.85);
             line-height: 1.8;
             margin-bottom: 20px;
         }
 
         .quote-author {
-            font-size: 1rem;
+            font-size: 0.95rem;
             font-weight: 700;
-            color: #001f3f;
+            color: #FFFFFF;
             text-transform: uppercase;
-            letter-spacing: 0.5px;
+            letter-spacing: 1px;
         }
 
         /* ==========================================
-           5. PREMIUM W-ELITE OFFERINGS (ASYMMETRIC)
+           6. HIGH-END EXECUTIVE GRID PLATFORMS
            ========================================== */
-        #offerings-section {
-            padding: 140px 30px;
-            background-color: #001f3f;
-        }
-
         #offerings {
-            max-width: 1100px;
+            max-width: 1200px;
             margin: 0 auto;
         }
 
         #offerings h2 {
-            font-size: 2.6rem;
+            font-size: 2.4rem;
             color: #FFFFFF;
             margin-bottom: 16px;
             text-align: center;
@@ -232,120 +227,108 @@
 
         .section-subtitle {
             text-align: center;
-            color: rgba(255, 255, 255, 0.6);
-            font-size: 1.1rem;
-            margin-bottom: 90px;
-            max-width: 650px;
+            color: rgba(255, 255, 255, 0.5);
+            font-size: 1.05rem;
+            margin-bottom: 80px;
+            max-width: 600px;
             margin-left: auto;
             margin-right: auto;
             font-weight: 300;
         }
 
-        /* Asymmetric List Layout instead of boring boxes */
-        .offering-row {
-            display: flex;
-            align-items: center;
-            gap: 60px;
-            margin-bottom: 80px;
-            padding-bottom: 60px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
         }
 
-        .offering-row:last-child {
-            margin-bottom: 0;
-            padding-bottom: 0;
-            border-bottom: none;
+        /* The Re-Imagined High-Prestige Card Structure */
+        .card {
+            background-color: rgba(255, 255, 255, 0.015);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            padding: 55px 40px;
+            border-radius: 4px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.4s ease,
+                        background-color 0.4s ease;
         }
 
-        /* Alternating structure direction */
-        .offering-row.reverse {
-            flex-direction: row-reverse;
+        /* Micro subtle gold divider line directly built into card ceiling */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: transparent;
+            transition: background-color 0.4s ease;
         }
 
-        .offering-meta {
-            flex: 1;
-            max-width: 250px;
+        /* The Beautiful Pop-Up Transition Effect */
+        .card:hover {
+            transform: translateY(-10px) scale(1.02); /* Smooth fluid popup */
+            background-color: rgba(255, 255, 255, 0.03);
+            border-color: rgba(212, 175, 55, 0.3);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.4);
         }
 
-        .offering-tag {
-            font-size: 0.75rem;
+        .card:hover::before {
+            background-color: #D4AF37; /* Illuminates gold bar on pop up */
+        }
+
+        .card-tag {
+            font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 2px;
             color: #D4AF37;
             font-weight: 700;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             display: block;
         }
 
-        .offering-meta h3 {
-            font-size: 2.2rem;
+        .card h3 {
+            font-size: 1.6rem;
             color: #FFFFFF;
+            margin-bottom: 20px;
             font-weight: 700;
-            letter-spacing: -0.5px;
+            letter-spacing: -0.3px;
         }
 
-        .offering-body {
-            flex: 2;
-            padding-left: 40px;
-            border-left: 1px solid rgba(255, 255, 255, 0.1);
+        .card p {
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.95rem;
+            line-height: 1.75;
         }
 
-        .offering-row.reverse .offering-body {
-            padding-left: 0;
-            padding-right: 40px;
-            border-left: none;
-            border-right: 1px solid rgba(255, 255, 255, 0.1);
-            text-align: right;
-        }
-
-        .offering-body p {
-            color: rgba(255, 255, 255, 0.8);
-            font-size: 1.1rem;
-            line-height: 1.8;
-        }
-
-        .offering-body strong {
-            color: #D4AF37;
+        .card p strong {
+            color: #FFFFFF;
+            border-bottom: 1px solid rgba(212, 175, 55, 0.4);
+            padding-bottom: 1px;
         }
 
         /* ==========================================
-           6. FOOTER STYLING
+           7. FOOTER STYLING
            ========================================== */
         footer {
             text-align: center;
-            padding: 80px 30px;
-            color: rgba(255, 255, 255, 0.4);
+            padding: 80px 40px;
+            color: rgba(255, 255, 255, 0.35);
             font-size: 0.8rem;
-            background-color: #00172f;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            background-color: #000c1a;
+            border-top: 1px solid rgba(255, 255, 255, 0.03);
             letter-spacing: 0.5px;
         }
 
         /* ==========================================
-           7. RESPONSIVE BREAKPOINTS
+           8. RESPONSIVE BREAKPOINTS
            ========================================== */
-        @media (max-width: 900px) {
-            .offering-row, .offering-row.reverse {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 24px;
-                padding-bottom: 40px;
-            }
-
-            .offering-meta {
-                max-width: 100%;
-            }
-
-            .offering-body, .offering-row.reverse .offering-body {
-                padding-left: 0;
-                padding-right: 0;
-                border-left: none;
-                border-right: none;
-                text-align: left;
-            }
-
-            #hero-container h1 {
-                font-size: 2.2rem;
+        @media (max-width: 1024px) {
+            .grid-container {
+                grid-template-columns: repeat(2, 1fr);
             }
         }
 
@@ -365,8 +348,20 @@
                 padding: 120px 20px;
             }
 
-            #philosophy-section, #offerings-section {
+            #hero-container h1 {
+                font-size: 2.1rem;
+            }
+
+            .web-section {
                 padding: 80px 20px;
+            }
+
+            .grid-container {
+                grid-template-columns: 1fr;
+            }
+
+            .card {
+                padding: 40px 30px;
             }
         }
     </style>
@@ -385,15 +380,15 @@
         </div>
     </header>
 
-    <!-- 1. EXECUTIVE HERO INTRO -->
+    <!-- 1. HERO HOME AREA -->
     <div id="hero-container">
         <h1>For Algerian English learners, university teachers, IELTS takers and professionals in different industries.</h1>
         <p>High-tier linguistic competence tailored for scholars, postgraduates, and corporate leaders aiming for global impact and publication-ready precision.</p>
         <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Apply for Admission</a>
     </div>
 
-    <!-- 2. THE ACADEMIC PHILOSOPHY LAYER -->
-    <section id="philosophy-section">
+    <!-- 2. PHILOSOPHY SECTION -->
+    <section id="philosophy-section" class="web-section">
         <div id="philosophy">
             <div class="philosophy-content">
                 <h2>The Academic Standard</h2>
@@ -412,54 +407,40 @@
         </div>
     </section>
 
-    <!-- 3. PREMIUM W-ELITE OFFERINGS LAYER -->
-    <section id="offerings-section">
+    <!-- 3. OFFERINGS GRID SECTION -->
+    <section id="offerings-section" class="web-section">
         <div id="offerings">
             <h2>W-Elite Offerings</h2>
             <p class="section-subtitle">Vetted institutional programs engineered for deep linguistic mastery and professional authority.</p>
             
             <div class="grid-container">
-                
-                <!-- Offering 1 (Left Aligned) -->
-                <div class="offering-row">
-                    <div class="offering-meta">
-                        <span class="offering-tag">Track I / Foundation</span>
-                        <h3>W-Core</h3>
-                    </div>
-                    <div class="offering-body">
-                        <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
-                    </div>
+                <!-- Offering 1 -->
+                <div class="card">
+                    <span class="card-tag">Track I / Foundation</span>
+                    <h3>W-Core</h3>
+                    <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
                 </div>
 
-                <!-- Offering 2 (Right Aligned Accent) -->
-                <div class="offering-row reverse">
-                    <div class="offering-meta">
-                        <span class="offering-tag">Track II / Certification</span>
-                        <h3>W-Ultra</h3>
-                    </div>
-                    <div class="offering-body">
-                        <p><strong>IELTS Preparation:</strong> Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
-                    </div>
+                <!-- Offering 2 -->
+                <div class="card">
+                    <span class="card-tag">Track II / Certification</span>
+                    <h3>W-Ultra</h3>
+                    <p><strong>IELTS Preparation:</strong> Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
                 </div>
 
-                <!-- Offering 3 (Left Aligned) -->
-                <div class="offering-row">
-                    <div class="offering-meta">
-                        <span class="offering-tag">Track III / Executive</span>
-                        <h3>W-PACE</h3>
-                    </div>
-                    <div class="offering-body">
-                        <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
-                    </div>
+                <!-- Offering 3 -->
+                <div class="card">
+                    <span class="card-tag">Track III / Executive</span>
+                    <h3>W-PACE</h3>
+                    <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
                 </div>
-
             </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 W-Elite Pro. All rights reserved.</p>
+        <p>&copy; 2026 W-Elite Pro. All  rights reserved.</p>
     </footer>
 
 </body>
