@@ -13,14 +13,14 @@
             padding: 0;
             box-sizing: border-box;
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
         }
 
         body {
             background-color: #FFFFFF;
             color: #333333;
             line-height: 1.7;
-            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
         }
 
         /* ==========================================
@@ -49,7 +49,6 @@
             letter-spacing: 2px;
             color: #FFFFFF !important;
             text-decoration: none;
-            display: inline-block;
         }
 
         nav {
@@ -94,16 +93,25 @@
         }
 
         /* ==========================================
-           3. HERO SECTION (DARK BACKGROUND)
+           3. STANDARD WEB PAGE SEQUENCING
            ========================================== */
-        #hero {
-            padding: 140px 20px;
+        .web-section {
+            padding: 100px 20px;
+            width: 100%;
+            border-bottom: 1px solid #f5f5f5;
+        }
+
+        /* ==========================================
+           4. HERO LANDING AREA
+           ========================================== */
+        #hero-container {
+            padding: 160px 20px;
             text-align: center;
             background-color: #001f3f; 
             border-bottom: 1px solid #001122;
         }
 
-        #hero h1 {
+        #hero-container h1 {
             font-size: 2.6rem;
             color: #FFFFFF; 
             max-width: 900px;
@@ -113,7 +121,7 @@
             font-weight: 700;
         }
 
-        #hero p {
+        #hero-container p {
             font-size: 1.2rem;
             color: #E0E0E0;
             max-width: 700px;
@@ -142,42 +150,33 @@
         }
 
         /* ==========================================
-           4. PHILOSOPHY SECTION (MINIMALIST PROSE)
+           5. PHILOSOPHY & ENDORSEMENT SECTION
            ========================================== */
         #philosophy {
-            padding: 100px 20px 40px 20px;
-            max-width: 800px;
+            max-width: 850px;
             margin: 0 auto;
         }
 
-        #philosophy h2 {
-            font-size: 1.8rem;
+        .philosophy-content h2 {
+            font-size: 2.2rem;
             color: #001f3f; 
             margin-bottom: 24px;
             font-weight: 700;
-            letter-spacing: -0.3px;
+            letter-spacing: -0.5px;
         }
 
-        #philosophy p {
+        .philosophy-content p {
             font-size: 1.15rem;
             color: #444444;
             line-height: 1.85;
-        }
-
-        /* ==========================================
-           5. INTEGRATED RECOMMENDATION SECTION
-           ========================================== */
-        #endorsement {
-            padding: 20px 20px 100px 20px;
-            max-width: 800px;
-            margin: 0 auto;
+            margin-bottom: 50px;
         }
 
         .testimonial-container {
             border-left: 3px solid #D4AF37; 
             padding-left: 24px;
             background-color: #fafafa;
-            padding: 30px;
+            padding: 35px;
             border-radius: 0 4px 4px 0;
         }
 
@@ -208,14 +207,12 @@
            6. DYNAMIC W-ELITE OFFERINGS SECTION
            ========================================== */
         #offerings {
-            padding: 110px 20px;
             max-width: 1140px;
             margin: 0 auto;
-            border-top: 1px solid #eaeaea;
         }
 
         #offerings h2 {
-            font-size: 2.2rem;
+            font-size: 2.4rem;
             color: #001f3f;
             margin-bottom: 12px;
             text-align: center;
@@ -255,29 +252,27 @@
                         border-color 0.4s ease;
         }
 
-        /* Dynamic expanding top anchor line */
         .card::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
-            width: 35px; /* Initial accent width */
+            width: 35px; 
             height: 4px;
             background-color: #001f3f;
             transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
         }
 
-        /* Smooth Floating and Shadow Lift on Hover */
+        /* This creates that beautiful popup/lift look natively when hovered */
         .card:hover {
-            transform: translateY(-6px);
+            transform: translateY(-8px);
             border-color: transparent;
-            box-shadow: 0 20px 40px rgba(0, 31, 63, 0.07);
+            box-shadow: 0 25px 50px rgba(0, 31, 63, 0.08);
         }
 
-        /* Expand indicator across the entire card width on hover */
         .card:hover::before {
             width: 100%;
-            background-color: #D4AF37; /* Shifts to Gold */
+            background-color: #D4AF37; 
         }
 
         .card-tag {
@@ -296,7 +291,6 @@
             margin-bottom: 18px;
             font-weight: 700;
             letter-spacing: -0.3px;
-            transition: color 0.3s ease;
         }
 
         .card p {
@@ -333,19 +327,15 @@
                 font-size: 0.75rem;
             }
 
-            #hero {
-                padding: 90px 20px;
+            #hero-container {
+                padding: 100px 20px;
             }
 
-            #hero h1 {
+            #hero-container h1 {
                 font-size: 1.8rem;
             }
 
-            #hero p {
-                font-size: 1.1rem;
-            }
-
-            #philosophy, #endorsement, #offerings {
+            .web-section {
                 padding: 60px 20px;
             }
 
@@ -368,65 +358,68 @@
         <div class="nav-container">
             <a href="#" class="logo">W-ELITE PRO</a>
             <nav>
-                <a href="#hero">Home</a>
-                <a href="#philosophy">Philosophy</a>
-                <a href="#offerings">Offerings</a>
+                <a href="#">Home</a>
+                <a href="#philosophy-section">Philosophy</a>
+                <a href="#offerings-section">Offerings</a>
             </nav>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="hero">
+    <!-- 1. HERO HOME AREA -->
+    <div id="hero-container">
         <h1>For Algerian English learners, university teachers, IELTS takers and professionals in different industries.</h1>
         <p>High-tier linguistic competence tailored for scholars, postgraduates, and corporate leaders aiming for global impact and publication-ready precision.</p>
         <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Apply for Admission</a>
-    </section>
+    </div>
 
-    <!-- Philosophy Section -->
-    <section id="philosophy">
-        <h2>The Academic Standard</h2>
-        <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
-    </section>
+    <!-- 2. PHILOSOPHY SECTION -->
+    <section id="philosophy-section" class="web-section">
+        <div id="philosophy">
+            <div class="philosophy-content">
+                <h2>The Academic Standard</h2>
+                <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
+            </div>
 
-    <!-- Academic Recommendation Section -->
-    <section id="endorsement">
-        <div class="testimonial-container">
-            <h3 class="quote-title">Academic Recommendation</h3>
-            <p class="quote-text">
-                "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals." [cite: Evidence: CV details and repeated requests for classroom management strategies and lesson plans. Conversation Date: 2025-11 to 2026-05., Discussion of their 17-year friendship and detailed planning for a shared business venture. Conversation Date: 2026-02 to 2026-03.]
-            </p>
-            <p class="quote-author">— Prof. F. Benyelles Bedjaoui</p>
+            <div class="academic-endorsement">
+                <div class="testimonial-container">
+                    <h3 class="quote-title">Academic Recommendation</h3>
+                    <p class="quote-text">
+                        "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals." [cite: Evidence: CV details and repeated requests for classroom management strategies and lesson plans. Conversation Date: 2025-11 to 2026-05., Discussion of their 17-year friendship and detailed planning for a shared business venture. Conversation Date: 2026-02 to 2026-03.]
+                    </p>
+                    <p class="quote-author">— Prof. F. Benyelles Bedjaoui</p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <!-- W-Elite Offerings Section -->
-    <section id="offerings">
-        <h2>W-Elite Offerings</h2>
-        <p class="section-subtitle">Vetted institutional programs engineered for deep linguistic mastery and professional authority.</p>
-        
-        <div class="grid-container">
+    <!-- 3. OFFERINGS SECTION -->
+    <section id="offerings-section" class="web-section">
+        <div id="offerings">
+            <h2>W-Elite Offerings</h2>
+            <p class="section-subtitle">Vetted institutional programs engineered for deep linguistic mastery and professional authority.</p>
             
-            <!-- Offering 1 -->
-            <div class="card">
-                <span class="card-tag">Foundation</span>
-                <h3>W-Core</h3>
-                <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
-            </div>
+            <div class="grid-container">
+                <!-- Offering 1 -->
+                <div class="card">
+                    <span class="card-tag">Foundation</span>
+                    <h3>W-Core</h3>
+                    <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
+                </div>
 
-            <!-- Offering 2 -->
-            <div class="card">
-                <span class="card-tag">Certification</span>
-                <h3>W-Ultra</h3>
-                <p><strong>IELTS Preparation:</strong> Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
-            </div>
+                <!-- Offering 2 -->
+                <div class="card">
+                    <span class="card-tag">Certification</span>
+                    <h3>W-Ultra</h3>
+                    <p><strong>IELTS Preparation:</strong> Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
+                </div>
 
-            <!-- Offering 3 -->
-            <div class="card">
-                <span class="card-tag">Executive</span>
-                <h3>W-PACE</h3>
-                <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
+                <!-- Offering 3 -->
+                <div class="card">
+                    <span class="card-tag">Executive</span>
+                    <h3>W-PACE</h3>
+                    <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
+                </div>
             </div>
-
         </div>
     </section>
 
