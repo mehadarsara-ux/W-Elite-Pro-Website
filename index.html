@@ -77,11 +77,11 @@
         }
 
         #hero h1 {
-            font-size: 2.8rem;
+            font-size: 2.6rem;
             color: #001f3f; /* Deep Navy Title */
             max-width: 900px;
             margin: 0 auto 24px auto;
-            line-height: 1.25;
+            line-height: 1.3;
             letter-spacing: -0.5px;
             font-weight: 700;
         }
@@ -139,7 +139,40 @@
         }
 
         /* ==========================================
-           5. PATHWAYS GRID SECTION
+           5. TESTIMONIAL / RECOMMENDATION SECTION
+           ========================================== */
+        #endorsement {
+            background-color: #fafafa;
+            padding: 90px 20px;
+            border-top: 1px solid #eaeaea;
+            border-bottom: 1px solid #eaeaea;
+            text-align: center;
+        }
+
+        .testimonial-container {
+            max-width: 750px;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 1.3rem;
+            font-style: italic;
+            color: #333333;
+            line-height: 1.8;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            font-weight: 700;
+            color: #001f3f;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        /* ==========================================
+           6. PATHWAYS GRID SECTION
            ========================================== */
         #pathways {
             padding: 100px 20px;
@@ -195,7 +228,7 @@
         }
 
         /* ==========================================
-           6. REGISTRATION / ADMISSION SECTION
+           7. REGISTRATION / ADMISSION SECTION
            ========================================== */
         #registration {
             padding: 110px 20px;
@@ -234,7 +267,7 @@
         }
 
         /* ==========================================
-           7. FOOTER STYLING
+           8. FOOTER STYLING
            ========================================== */
         footer {
             text-align: center;
@@ -246,7 +279,7 @@
         }
 
         /* ==========================================
-           8. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
+           9. RESPONSIVE BREAKPOINTS (MOBILE & TABLET)
            ========================================== */
         @media (max-width: 768px) {
             header {
@@ -269,15 +302,19 @@
             }
 
             #hero h1 {
-                font-size: 2rem;
+                font-size: 1.8rem;
             }
 
             #hero p {
                 font-size: 1.1rem;
             }
 
-            #philosophy, #pathways, #registration {
+            #philosophy, #endorsement, #pathways, #registration {
                 padding: 60px 20px;
+            }
+
+            .quote-text {
+                font-size: 1.15rem;
             }
 
             .grid-container {
@@ -297,7 +334,7 @@
     <!-- Header & Navigation -->
     <header>
         <div class="nav-container">
-            <a href="#" class="logo">W-ELITE</a>
+            <a href="#" class="logo">W-ELITE PRO</a>
             <nav>
                 <a href="#hero">Home</a>
                 <a href="#philosophy">Philosophy</a>
@@ -309,20 +346,30 @@
 
     <!-- Hero Section -->
     <section id="hero">
-        <h1>Advanced English Frameworks for Academics, Researchers, and Professionals</h1>
+        <h1>For Algerian English learners, university teachers, IELTS takers and professionals in different industries.</h1>
         <p>High-tier linguistic competence tailored for scholars, postgraduates, and corporate leaders aiming for global impact and publication-ready precision.</p>
-        <a href="https://w-elitepro.com/apply/" class="cta-button">Apply for Admission</a>
+        <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Apply for Admission</a>
     </section>
 
     <!-- Philosophy Section -->
     <section id="philosophy">
         <h2>The Academic Standard</h2>
-        <p>W-Elite was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
+        <p>W-Elite Pro was founded to bridge the gap between general language proficiency and the rigorous demands of international academia and executive corporate environments. Led by university-vetted doctoral expertise, our pathways go beyond basic grammar to master the nuances of scholarly discourse, international publication metrics, and premium business communication.</p>
+    </section>
+
+    <!-- Academic Recommendation Section -->
+    <section id="endorsement">
+        <div class="testimonial-container">
+            <p class="quote-text">
+                "Whether you are looking to master professional communication skills or gain fluency for academic purposes, the systematic approach and clear, effective teaching style at W-Elite Pro will guide you toward your goals."
+            </p>
+            <p class="quote-author">— Prof. F. Benyelles Bedjaoui</p>
+        </div>
     </section>
 
     <!-- Pathways Section -->
     <section id="pathways">
-        <h2>W-Elite Offerings</h2>
+        <h2>Elite Training Pathways</h2>
         <div class="grid-container">
             
             <!-- Pathway 1 -->
@@ -349,13 +396,13 @@
     <!-- Application / CTA Section -->
     <section id="registration">
         <h2>Begin Your Pathway</h2>
-        <p>Admission to W-Elite cohorts is highly selective to ensure peer-to-peer excellence. Submit your professional details to initiate your application sequence.</p>
-        <a href="https://w-elitepro.com/apply/" class="cta-button">Access Application Form</a>
+        <p>Admission to W-Elite Pro cohorts is highly selective to ensure peer-to-peer excellence. Submit your professional details to initiate your application sequence.</p>
+        <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Access Application Form</a>
     </section>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2026 W-Elite Institute. All institutional rights reserved.</p>
+        <p>&copy; 2026 W-Elite Pro Institute. All institutional rights reserved.</p>
     </footer>
 
 </body>
