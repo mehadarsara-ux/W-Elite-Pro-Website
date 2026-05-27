@@ -63,14 +63,14 @@
             margin-left: 35px;
             font-size: 0.8rem;
             font-weight: 500;
-            text-transform: uppercase; /* Editorial corporate aesthetic */
-            letter-spacing: 1.2px;     /* Executive corporate tracking */
+            text-transform: uppercase; 
+            letter-spacing: 1.2px;     
             position: relative;
             padding: 6px 0;
             transition: color 0.3s ease;
         }
 
-        /* The Sleek BC Animated Micro-Underline */
+        /* Sleek BC Animated Micro-Underline */
         nav a::after {
             content: '';
             position: absolute;
@@ -78,7 +78,7 @@
             left: 0;
             width: 100%;
             height: 2px;
-            background-color: #D4AF37; /* Premium Gold Line */
+            background-color: #D4AF37; 
             transform: scaleX(0);
             transform-origin: right;
             transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -94,12 +94,12 @@
         }
 
         /* ==========================================
-           3. HERO SECTION (DARK BACKGROUND FIXED)
+           3. HERO SECTION (DARK BACKGROUND)
            ========================================== */
         #hero {
             padding: 140px 20px;
             text-align: center;
-            background-color: #001f3f; /* Deep Navy Background */
+            background-color: #001f3f; 
             border-bottom: 1px solid #001122;
         }
 
@@ -122,7 +122,7 @@
         }
 
         .cta-button {
-            background-color: #D4AF37; /* High contrast gold call to action */
+            background-color: #D4AF37; 
             color: #FFFFFF;
             padding: 14px 32px;
             text-decoration: none;
@@ -205,21 +205,32 @@
         }
 
         /* ==========================================
-           6. PATHWAYS GRID SECTION
+           6. DYNAMIC W-ELITE OFFERINGS SECTION
            ========================================== */
-        #pathways {
-            padding: 100px 20px;
-            max-width: 1100px;
+        #offerings {
+            padding: 110px 20px;
+            max-width: 1140px;
             margin: 0 auto;
             border-top: 1px solid #eaeaea;
         }
 
-        #pathways h2 {
-            font-size: 1.8rem;
+        #offerings h2 {
+            font-size: 2.2rem;
             color: #001f3f;
-            margin-bottom: 48px;
+            margin-bottom: 12px;
             text-align: center;
             font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+
+        .section-subtitle {
+            text-align: center;
+            color: #666666;
+            font-size: 1.05rem;
+            margin-bottom: 60px;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .grid-container {
@@ -232,86 +243,83 @@
         .card {
             flex: 1;
             min-width: 300px;
-            max-width: 340px;
-            border: 1px solid #eaeaea;
+            max-width: 350px;
+            border: 1px solid #eef0f3;
             background-color: #FFFFFF;
-            padding: 35px 30px;
-            border-radius: 4px;
-            border-top: 3px solid #001f3f;
-            transition: border-top-color 0.2s ease, box-shadow 0.2s ease;
+            padding: 45px 35px;
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), 
+                        border-color 0.4s ease;
         }
 
+        /* Dynamic expanding top anchor line */
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 35px; /* Initial accent width */
+            height: 4px;
+            background-color: #001f3f;
+            transition: width 0.4s cubic-bezier(0.16, 1, 0.3, 1), background-color 0.4s ease;
+        }
+
+        /* Smooth Floating and Shadow Lift on Hover */
         .card:hover {
-            border-top-color: #D4AF37;
-            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.03);
+            transform: translateY(-6px);
+            border-color: transparent;
+            box-shadow: 0 20px 40px rgba(0, 31, 63, 0.07);
+        }
+
+        /* Expand indicator across the entire card width on hover */
+        .card:hover::before {
+            width: 100%;
+            background-color: #D4AF37; /* Shifts to Gold */
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            color: #D4AF37;
+            font-weight: 700;
+            margin-bottom: 12px;
+            display: block;
         }
 
         .card h3 {
-            font-size: 1.25rem;
+            font-size: 1.5rem;
             color: #001f3f;
-            margin-bottom: 16px;
-            font-weight: 600;
-            letter-spacing: -0.2px;
+            margin-bottom: 18px;
+            font-weight: 700;
+            letter-spacing: -0.3px;
+            transition: color 0.3s ease;
         }
 
         .card p {
             color: #555555;
             font-size: 0.95rem;
-            line-height: 1.65;
-        }
-
-        /* ==========================================
-           7. REGISTRATION / ADMISSION SECTION
-           ========================================== */
-        #registration {
-            padding: 110px 20px;
-            text-align: center;
-            background-color: #fafafa;
-            border-top: 1px solid #eaeaea;
-            border-bottom: 1px solid #eaeaea;
-        }
-
-        #registration h2 {
-            font-size: 1.8rem;
-            color: #001f3f;
-            margin-bottom: 16px;
-            font-weight: 700;
-        }
-
-        #registration p {
-            font-size: 1.15rem;
-            color: #444444;
-            max-width: 600px;
-            margin: 0 auto 40px auto;
             line-height: 1.7;
         }
 
-        #registration .cta-button {
-            background-color: #001f3f;
-            border-color: #001f3f;
-            color: #FFFFFF;
-        }
-
-        #registration .cta-button:hover {
-            background-color: #D4AF37;
-            border-color: #D4AF37;
-            color: #FFFFFF;
-        }
-
         /* ==========================================
-           8. FOOTER STYLING
+           7. FOOTER STYLING
            ========================================== */
         footer {
             text-align: center;
-            padding: 50px 20px;
+            padding: 60px 20px;
             color: #888888;
             font-size: 0.85rem;
             background-color: #FFFFFF;
+            border-top: 1px solid #eaeaea;
             letter-spacing: 0.3px;
         }
 
         /* ==========================================
-           9. RESPONSIVE BREAKPOINTS
+           8. RESPONSIVE BREAKPOINTS
            ========================================== */
         @media (max-width: 768px) {
             .nav-container {
@@ -337,7 +345,7 @@
                 font-size: 1.1rem;
             }
 
-            #philosophy, #endorsement, #pathways, #registration {
+            #philosophy, #endorsement, #offerings {
                 padding: 60px 20px;
             }
 
@@ -362,8 +370,7 @@
             <nav>
                 <a href="#hero">Home</a>
                 <a href="#philosophy">Philosophy</a>
-                <a href="#pathways">Pathways</a>
-                <a href="#registration">Admission</a>
+                <a href="#offerings">Offerings</a>
             </nav>
         </div>
     </header>
@@ -392,37 +399,35 @@
         </div>
     </section>
 
-    <!-- Pathways Section -->
-    <section id="pathways">
-        <h2>Elite Training Pathways</h2>
+    <!-- W-Elite Offerings Section -->
+    <section id="offerings">
+        <h2>W-Elite Offerings</h2>
+        <p class="section-subtitle">Vetted institutional programs engineered for deep linguistic mastery and professional authority.</p>
+        
         <div class="grid-container">
             
-            <!-- Pathway 1 -->
+            <!-- Offering 1 -->
             <div class="card">
+                <span class="card-tag">Foundation</span>
                 <h3>W-Core</h3>
                 <p>Designed for ambitious individuals seeking to confidently speak and write in English to unlock premier professional and international opportunities.</p>
             </div>
 
-            <!-- Pathway 2 -->
+            <!-- Offering 2 -->
             <div class="card">
+                <span class="card-tag">Certification</span>
                 <h3>W-Ultra</h3>
                 <p><strong>IELTS Preparation:</strong> Rigorous strategic training targeting high-band scores (7+) for international scholarship applications, institutional compliance, and global mobility.</p>
             </div>
 
-            <!-- Pathway 3 -->
+            <!-- Offering 3 -->
             <div class="card">
+                <span class="card-tag">Executive</span>
                 <h3>W-PACE</h3>
                 <p>Tailored high-level communication frameworks specifically engineered for university teachers, managers, and high-level professionals.</p>
             </div>
 
         </div>
-    </section>
-
-    <!-- Application / CTA Section -->
-    <section id="registration">
-        <h2>Begin Your Pathway</h2>
-        <p>Admission to W-Elite Pro cohorts is highly selective to ensure peer-to-peer excellence. Submit your professional details to initiate your application sequence.</p>
-        <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="cta-button">Access Application Form</a>
     </section>
 
     <!-- Footer -->
