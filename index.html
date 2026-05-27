@@ -8,7 +8,7 @@
     <!-- Premium Typography -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght=0,400;0,600;1,400&display=swap" rel="stylesheet">
     
     <style>
         /* ==========================================
@@ -74,7 +74,7 @@
             font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 5px;
-            color: #ffffff !important; /* Force visibility */
+            color: #ffffff !important;
             text-decoration: none;
             transition: var(--bezier-fast);
             display: inline-block;
@@ -148,7 +148,7 @@
         }
 
         /* ==========================================
-           3. FIXED WHITE EDITORIAL HERO AREA
+           3. WHITE EDITORIAL HERO AREA
            ========================================== */
         #hero-section {
             padding-top: 240px;
@@ -167,16 +167,23 @@
             align-items: start;
         }
 
-        /* Core Title Typography Fixed */
+        /* Core Title Typography Fixed to lead with W-Elite for... + Typewriter */
         .hero-title {
             font-size: 4.2rem;
-            line-height: 1.15;
+            line-height: 1.2;
             color: var(--brand-navy);
             margin-bottom: 40px;
             font-family: 'Playfair Display', serif;
         }
 
-        /* Body Typography Fixed: Styled as an elegant paragraph, not a giant title */
+        .typewriter-glow {
+            color: var(--brand-gold); 
+            border-right: 2px solid var(--brand-gold); 
+            padding-right: 4px;
+            font-style: italic;
+        }
+
+        /* Balanced Introductory Typography Passages */
         .hero-intro-text {
             font-size: 1.15rem;
             color: var(--text-dark);
@@ -192,7 +199,7 @@
             line-height: 1.8;
         }
 
-        /* Hero Right: Clean branding portal with dynamic typewriter */
+        /* Hero Right: Clean Minimal Call to Action Layout */
         .hero-right-editorial-card {
             background: var(--bg-pure-white);
             border: 1px solid var(--border-line);
@@ -238,13 +245,6 @@
             background-color: transparent;
             color: var(--brand-navy);
             border-color: var(--brand-navy);
-        }
-
-        .typewriter-glow {
-            color: var(--brand-gold); 
-            border-right: 2px solid var(--brand-gold); 
-            padding-right: 4px;
-            font-style: italic;
         }
 
         /* ==========================================
@@ -311,7 +311,7 @@
         }
 
         /* ==========================================
-           5. MODERN MODULES PATHWAY GRID
+           5. REFINED OFFERINGS PATHWAY ARCHITECTURE
            ========================================== */
         #offerings-section {
             background-color: var(--bg-pure-white);
@@ -342,6 +342,7 @@
             gap: 30px;
         }
 
+        /* Premium structural cards replacing informal blocks */
         .catalogue-item {
             background-color: var(--bg-pure-white);
             display: flex;
@@ -353,7 +354,7 @@
             box-shadow: 0 4px 25px rgba(0, 31, 63, 0.015);
             border: 1px solid var(--border-line);
             transition: var(--bezier-fast);
-            min-height: 380px;
+            min-height: 400px;
         }
 
         .catalogue-item:hover {
@@ -491,14 +492,14 @@
     <!-- Pristine White Canvas Hero Section -->
     <section id="hero-section">
         <div class="hero-container">
-            <!-- Left Side: Clean Visual Hierarchy -->
+            <!-- Left Side: Clean Typographic Hierarchy -->
             <div class="hero-left">
-                <!-- Short, Majestic Headline -->
+                <!-- Short, Definitive Main Title with Typewriter Inline -->
                 <h1 class="hero-title">
-                    <span class="lang-text" data-en="W-Elite for..." data-fr="W-Elite pour...">W-Elite for...</span>
+                    <span class="lang-text" data-en="W-Elite for " data-fr="W-Elite pour ">W-Elite for </span><span id="typewriter" class="typewriter-glow"></span>
                 </h1>
                 
-                <!-- Perfectly Proportioned Editorial Summary (Not treated as a title) -->
+                <!-- Editorial Summary (Properly scaled, not treated as a title) -->
                 <p class="hero-intro-text lang-text" 
                    data-en="W-Elite Pro is designed for anyone ready to master English—from everyday fluency and high-band IELTS prep to professional and academic success." 
                    data-fr="W-Elite Pro est conçu pour tous ceux qui sont prêts à maîtriser l'anglais—de l'aisance quotidienne et la préparation intensive à l'IELTS, jusqu'au succès professionnel et académique.">
@@ -511,15 +512,13 @@
                 </p>
             </div>
             
-            <!-- Right Side: Institutional Branding Card with Core Restored -->
+            <!-- Right Side: High-Tier Portal Card -->
             <div class="hero-right-editorial-card">
                 <div class="card-headline">
-                    W-Elite
-                    <br>
-                    <span id="typewriter" class="typewriter-glow"></span>
+                    W-Elite Pro
                 </div>
                 <a href="mailto:contact@w-elitepro.com" class="cta-button">
-                    <span class="lang-text" data-en="Get In Touch" data-fr="Contactez-Nous">Get In Touch</span>
+                    <span class="lang-text" data-en="Request Consultation" data-fr="Demander un entretien">Request Consultation</span>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
                 </a>
             </div>
@@ -550,7 +549,7 @@
         </div>
     </section>
 
-    <!-- Curated Modules (3-Column Grid Layout) -->
+    <!-- Curated Modules (Rigorous Architectural 3-Column Grid) -->
     <section id="offerings-section">
         <div class="offerings-container">
             <div class="offerings-header-layout">
