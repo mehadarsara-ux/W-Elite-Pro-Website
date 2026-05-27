@@ -12,16 +12,17 @@
     
     <style>
         /* ==========================================
-           1. PREMIUM EDITORIAL TOKENS & RESET
+           1. INSTITUTIONAL COLOR BRANDING & RESET
            ========================================== */
         :root {
-            --nav-navy: #0b1528;       /* The exact crisp, deep institutional navy from your reference */
-            --bg-light: #f8f9fa;       /* Light, airy premium gray/white for editorial contrast */
-            --pure-white: #FFFFFF;
-            --accent-gold: #dfb743;    /* Refined raw silk gold */
-            --text-dark: #111625;      /* Deep navy-toned black for high-end readability */
-            --text-muted: #5a6578;     /* Elegant editorial commentary gray */
-            --bezier-fast: all 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+            --brand-navy: #001f3f;      /* Absolute signature Navy Blue */
+            --brand-gold: #D4AF37;      /* Distinct premium metallic Gold */
+            --bg-pure-white: #ffffff;   /* Pure white breathable canvas */
+            
+            --text-dark: #001f3f;       /* Deep navy typography for elite authority */
+            --text-muted: #4a5568;      /* Clean mid-tone gray for descriptive passages */
+            --border-line: rgba(0, 31, 63, 0.08);
+            --bezier-fast: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
         }
 
         * {
@@ -32,7 +33,7 @@
         }
 
         body {
-            background-color: var(--bg-light);
+            background-color: var(--bg-pure-white);
             color: var(--text-dark);
             font-family: 'Inter', sans-serif;
             line-height: 1.7;
@@ -46,17 +47,17 @@
         }
 
         /* ==========================================
-           2. AIRY NAVY HEADER (Inspired by Lingua Franca)
+           2. SIGNATURE NAVY HIGH-CONTRAST HEADER
            ========================================== */
         header {
-            background-color: var(--nav-navy);
+            background-color: var(--brand-navy);
             position: fixed;
             top: 0;
             left: 0;
             width: 100%;
             z-index: 1000;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
-            border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+            border-bottom: 2px solid var(--brand-gold);
+            box-shadow: 0 4px 20px rgba(0, 31, 63, 0.05);
         }
 
         .nav-container {
@@ -65,16 +66,21 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 22px 60px;
+            padding: 20px 60px;
         }
 
         .logo {
             font-family: 'Inter', sans-serif;
-            font-size: 0.9rem;
+            font-size: 0.95rem;
             font-weight: 600;
             letter-spacing: 5px;
-            color: var(--pure-white);
+            color: #ffffff;
             text-decoration: none;
+            transition: var(--bezier-fast);
+        }
+
+        .logo:hover {
+            color: var(--brand-gold);
         }
 
         .nav-right {
@@ -84,7 +90,7 @@
         }
 
         nav a {
-            color: rgba(255, 255, 255, 0.8);
+            color: rgba(255, 255, 255, 0.85);
             text-decoration: none;
             font-size: 0.75rem;
             font-weight: 500;
@@ -92,31 +98,32 @@
             letter-spacing: 2px;     
             margin-left: 35px;
             transition: var(--bezier-fast);
+            position: relative;
         }
 
         nav a:hover {
-            color: var(--accent-gold);
+            color: var(--brand-gold);
         }
 
-        /* Premium Consultation Button like Lingua Franca */
+        /* Premium Consultation Pathway Action */
         .btn-consultation {
-            background-color: var(--pure-white);
-            color: var(--nav-navy);
+            background-color: var(--brand-gold);
+            color: var(--brand-navy);
             padding: 10px 24px;
-            border-radius: 50px;
+            border-radius: 4px;
             font-size: 0.7rem;
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             text-decoration: none;
             transition: var(--bezier-fast);
-            border: 1px solid transparent;
+            border: 1px solid var(--brand-gold);
         }
 
         .btn-consultation:hover {
             background-color: transparent;
-            color: var(--pure-white);
-            border-color: rgba(255, 255, 255, 0.4);
+            color: #ffffff;
+            border-color: #ffffff;
         }
 
         .lang-switcher {
@@ -124,7 +131,7 @@
             align-items: center;
             gap: 8px;
             font-size: 0.7rem;
-            border-left: 1px solid rgba(255, 255, 255, 0.15);
+            border-left: 1px solid rgba(255, 255, 255, 0.2);
             padding-left: 25px;
         }
 
@@ -134,20 +141,20 @@
             color: rgba(255, 255, 255, 0.4);
             cursor: pointer;
             font-weight: 600;
+            transition: var(--bezier-fast);
         }
 
         .lang-btn.active {
-            color: var(--accent-gold);
+            color: var(--brand-gold);
         }
 
         /* ==========================================
-           3. LIGHT & VIBRANT HERO DESIGN
+           3. PRISTINE WHITE EDITORIAL HERO AREA
            ========================================== */
         #hero-section {
-            padding-top: 180px;
-            padding-bottom: 100px;
-            background: linear-gradient(180deg, var(--nav-navy) 0%, #12223c 40%, var(--bg-light) 100%);
-            color: var(--pure-white);
+            padding-top: 220px;
+            padding-bottom: 120px;
+            background-color: var(--bg-pure-white);
             position: relative;
         }
 
@@ -157,39 +164,40 @@
             padding: 0 60px;
             display: grid;
             grid-template-columns: 1.1fr 0.9fr;
-            gap: 60px;
+            gap: 80px;
             align-items: center;
         }
 
         .hero-left h1 {
-            font-size: 4.2rem;
+            font-size: 4.4rem;
             line-height: 1.15;
-            color: var(--pure-white);
+            color: var(--brand-navy);
             margin-bottom: 25px;
         }
 
-        /* Workspace Concept Card to replicate the open, alive feeling */
+        /* Pure White Elevated Context Card */
         .hero-right-editorial-card {
-            background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(20px);
-            -webkit-backdrop-filter: blur(20px);
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            padding: 50px;
-            border-radius: 12px;
-            box-shadow: 0 30px 60px rgba(0,0,0,0.2);
+            background: var(--bg-pure-white);
+            border: 1px solid var(--border-line);
+            border-left: 3px solid var(--brand-navy);
+            padding: 55px;
+            border-radius: 4px;
+            box-shadow: 0 10px 40px rgba(0, 31, 63, 0.02);
         }
 
         .hero-right-editorial-card p {
             font-size: 1.1rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: var(--text-muted);
             font-weight: 300;
             line-height: 1.9;
             margin-bottom: 40px;
         }
 
+        /* Authoritative Navy / Gold Pathway Button */
         .cta-button {
             font-family: 'Inter', sans-serif;
-            color: var(--pure-white);
+            color: #ffffff;
+            background-color: var(--brand-navy);
             text-decoration: none;
             font-size: 0.75rem;
             text-transform: uppercase;
@@ -198,29 +206,33 @@
             align-items: center;
             gap: 12px;
             transition: var(--bezier-fast);
-            padding: 12px 28px;
-            border: 1px solid var(--accent-gold);
+            padding: 14px 30px;
+            border: 1px solid var(--brand-navy);
             border-radius: 4px;
+            font-weight: 500;
         }
 
         .cta-button:hover {
-            background-color: var(--accent-gold);
-            color: var(--nav-navy);
+            background-color: transparent;
+            color: var(--brand-navy);
+            border-color: var(--brand-navy);
         }
 
         .typewriter-glow {
-            color: var(--accent-gold); 
-            border-right: 2px solid var(--accent-gold); 
+            color: var(--brand-gold); 
+            border-right: 2px solid var(--brand-gold); 
             padding-right: 4px;
             font-style: italic;
         }
 
         /* ==========================================
-           4. MAGAZINE-STYLE PHILOSOPHY PAGE (White)
+           4. MAGAZINE PHILOSOPHY ARCHITECTURE
            ========================================== */
         #philosophy-section {
-            background-color: var(--pure-white);
+            background-color: var(--bg-pure-white);
             padding: 140px 60px;
+            border-top: 1px solid var(--border-line);
+            border-bottom: 1px solid var(--border-line);
         }
 
         .philosophy-layout {
@@ -235,15 +247,15 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 3px;
-            color: var(--accent-gold);
+            color: var(--brand-gold);
             font-weight: 600;
         }
 
         .philosophy-content h2 {
-            font-size: 3rem;
+            font-size: 3.2rem;
             line-height: 1.25;
             margin-bottom: 35px;
-            color: var(--text-dark);
+            color: var(--brand-navy);
         }
 
         .philosophy-content p {
@@ -256,7 +268,7 @@
 
         .endorsement-block {
             padding-top: 50px;
-            border-top: 1px solid rgba(0, 0, 0, 0.06);
+            border-top: 1px solid var(--border-line);
         }
 
         .quote-text {
@@ -264,7 +276,7 @@
             font-style: italic;
             font-weight: 400;
             line-height: 1.7;
-            color: var(--text-dark);
+            color: var(--brand-navy);
             margin-bottom: 25px;
         }
 
@@ -272,15 +284,15 @@
             font-size: 0.8rem;
             text-transform: uppercase;
             letter-spacing: 2px;
-            color: var(--text-dark);
+            color: var(--brand-navy);
             font-weight: 600;
         }
 
         /* ==========================================
-           5. CLEAN, MODERN OFFERINGS CATALOGUE (Light Canvas)
+           5. SIGNATURE FRAMEWORKS PATHWAYS ROW
            ========================================== */
         #offerings-section {
-            background-color: var(--bg-light);
+            background-color: var(--bg-pure-white);
             padding: 140px 60px;
         }
 
@@ -298,50 +310,52 @@
         }
 
         .catalogue-title {
-            font-size: 3rem;
-            color: var(--text-dark);
+            font-size: 3.2rem;
+            color: var(--brand-navy);
         }
 
         .catalogue-list {
             display: flex;
             flex-direction: column;
-            gap: 20px;
+            gap: 24px;
         }
 
-        /* High-contrast modern white presentation rows */
+        /* Clean White presentation block with gold border reveals */
         .catalogue-item {
-            background-color: var(--pure-white);
+            background-color: var(--bg-pure-white);
             display: grid;
             grid-template-columns: 0.4fr 1.1fr 1.5fr;
             gap: 40px;
             padding: 50px 40px;
-            border-radius: 8px;
+            border-radius: 4px;
             align-items: center;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.015);
-            border: 1px solid rgba(0, 0, 0, 0.03);
+            box-shadow: 0 4px 25px rgba(0, 31, 63, 0.015);
+            border: 1px solid var(--border-line);
             transition: var(--bezier-fast);
         }
 
         .catalogue-item:hover {
             transform: translateY(-4px);
-            box-shadow: 0 20px 40px rgba(11, 21, 40, 0.05);
-            border-color: rgba(223, 183, 67, 0.3);
+            box-shadow: 0 15px 35px rgba(0, 31, 63, 0.04);
+            border-color: var(--brand-gold);
         }
 
         .cat-num {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
-            color: rgba(11, 21, 40, 0.2);
+            font-size: 2rem;
+            color: rgba(0, 31, 63, 0.15);
             font-style: italic;
+            transition: var(--bezier-fast);
         }
 
         .catalogue-item:hover .cat-num {
-            color: var(--accent-gold);
+            color: var(--brand-gold);
+            transform: translateX(4px);
         }
 
         .cat-meta h3 {
-            font-size: 2.1rem;
-            color: var(--text-dark);
+            font-size: 2.2rem;
+            color: var(--brand-navy);
             margin-bottom: 8px;
         }
 
@@ -349,7 +363,7 @@
             font-size: 0.7rem;
             text-transform: uppercase;
             letter-spacing: 1.5px;
-            color: var(--accent-gold);
+            color: var(--brand-gold);
             font-weight: 600;
         }
 
@@ -360,12 +374,13 @@
         }
 
         /* ==========================================
-           6. BRIGHT & REFINED EDITORIAL FOOTER
+           6. INSTITUTIONAL NAVY FOOTER
            ========================================== */
         footer {
-            background-color: var(--pure-white);
-            border-top: 1px solid rgba(0, 0, 0, 0.05);
+            background-color: var(--brand-navy);
+            border-top: 3px solid var(--brand-gold);
             padding: 60px 60px;
+            color: #ffffff;
         }
 
         .footer-wrap {
@@ -378,15 +393,20 @@
 
         .footer-wrap p {
             font-size: 0.8rem;
-            color: var(--text-muted);
+            color: rgba(255, 255, 255, 0.6);
         }
 
         .footer-logo {
             font-weight: 600;
             letter-spacing: 3px;
-            color: var(--text-dark);
+            color: #ffffff;
             text-decoration: none;
-            font-size: 0.8rem;
+            font-size: 0.85rem;
+            transition: var(--bezier-fast);
+        }
+
+        .footer-logo:hover {
+            color: var(--brand-gold);
         }
 
         /* ==========================================
@@ -398,16 +418,16 @@
                 gap: 40px;
             }
             .nav-container { padding: 20px 30px; }
-            #hero-section { padding: 140px 30px 60px 30px; }
+            #hero-section { padding: 160px 30px 60px 30px; }
             #philosophy-section, #offerings-section { padding: 80px 30px; }
             .hero-left h1 { font-size: 3rem; }
-            .hero-right-editorial-card { padding: 30px; }
+            .hero-right-editorial-card { padding: 35px; border-left: none; border-top: 3px solid var(--brand-navy); }
         }
     </style>
 </head>
 <body>
 
-    <!-- Header Navigation Section (Airy Elegant Navy) -->
+    <!-- Upper High-End Navigation Bar Layer -->
     <header>
         <div class="nav-container">
             <a href="#" class="logo">W-ELITE PRO</a>
@@ -417,17 +437,17 @@
                     <a href="#philosophy-section" class="lang-text" data-en="Philosophy" data-fr="Philosophie">Philosophy</a>
                     <a href="#offerings-section" class="lang-text" data-en="Offerings" data-fr="Programmes">Offerings</a>
                 </nav>
-                <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="btn-Apply lang-text" data-en="Apply here" data-fr="S'inscrire">Apply here</a>
+                <a href="https://w-elitepro.com/apply/" target="_blank" rel="noopener noreferrer" class="btn-consultation lang-text" data-en="Free Consultation" data-fr="Consultation Gratuite">Free Consultation</a>
                 <div class="lang-switcher">
                     <button class="lang-btn active" onclick="setLanguage('en')">EN</button>
-                    <span style="color:rgba(255,255,255,0.2)">|</span>
+                    <span style="color:rgba(255,255,255,0.25)">|</span>
                     <button class="lang-btn" onclick="setLanguage('fr')">FR</button>
                 </div>
             </div>
         </div>
     </header>
 
-    <!-- 1. HERO AREA (Deep High-Contrast Gradient Drop) -->
+    <!-- Pristine White Canvas Hero Section -->
     <section id="hero-section">
         <div class="hero-container">
             <div class="hero-left">
@@ -449,7 +469,7 @@
         </div>
     </section>
 
-    <!-- 2. PHILOSOPHY SECTION (Crisp Premium White) -->
+    <!-- Core Philosophy Area -->
     <section id="philosophy-section">
         <div class="philosophy-layout">
             <div class="section-label lang-text" data-en="01 / Core Mandate" data-fr="01 / Mandat Principal">01 / Core Mandate</div>
@@ -473,7 +493,7 @@
         </div>
     </section>
 
-    <!-- 3. FRAMEWORKS CATALOGUE (Light Clean Interactive Canvas) -->
+    <!-- Specialized Pathways Frameworks Section -->
     <section id="offerings-section">
         <div class="offerings-container">
             <div class="offerings-header-layout">
@@ -527,7 +547,7 @@
         </div>
     </section>
 
-    <!-- Refined Light Footer -->
+    <!-- Institutional Navy Footer Layer -->
     <footer>
         <div class="footer-wrap">
             <a href="#" class="footer-logo">W-ELITE PRO</a>
